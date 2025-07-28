@@ -1,5 +1,7 @@
 # mk-demo
 
+<https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/>
+
 ## usage
 
 ```bash
