@@ -6,15 +6,15 @@ site_name: MkLorum
 theme:
   name: material
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
-    - navigation.path
-    - navigation.indexes
-    - navigation.top
-    - navigation.sections
+    - navigation.tabs  # 顶部使用 Tab
+    - navigation.tabs.sticky  # 悬浮固定
+    - navigation.path  # 面包屑导航
+    - navigation.indexes  # 侧边栏索引
+    - navigation.top  # 返回顶部
+    - navigation.sections  # 侧边栏多层级章节
     - search.suggest
     - search.highlight
-    - content.code.copy
+    - content.code.copy  # 代码块添加复制按钮
     - content.action.edit
 
 plugins:
