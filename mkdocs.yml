@@ -1,27 +1,106 @@
 site_name: MkLorum
+
 # nav:
 #   - Home: index.md
-#   - About: about.md
+#   - 入门指南:
+#       - 安装: getting-started/installation.md
+#       - 配置: getting-started/configuration.md
+#   - 高级功能:
+#       - 插件: advanced/plugins.md
+#       - 自定义主题: advanced/customization.md
+#   - API 参考: api.md
+#   - 常见问题: faq.md
+#   - 关于我们: about.md
+    
 # theme: readthedocs
 theme:
   name: material
+  palette:
+    - scheme: default  # 浅色模式
+      primary: indigo  # 主色调：靛蓝
+      accent: blue     # 强调色：深蓝
+      toggle:
+        icon: material/weather-night
+    - scheme: slate    # 暗色模式
+      primary: indigo
+      accent: blue
+      toggle:
+        icon: material/weather-sunny
+    - scheme: default
+      primary: teal
+      accent: light-green
+      toggle:
+        icon: material/weather-night
+    - scheme: slate
+      primary: teal
+      accent: light-green
+      toggle:
+        icon: material/weather-sunny
+    - scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+    - scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+    - scheme: default
+      primary: orange
+      accent: amber
+      toggle:
+        icon: material/weather-night
+    - scheme: slate
+      primary: orange
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+    - scheme: default
+      primary: brown
+      accent: red
+      toggle:
+        icon: material/weather-night
+    - scheme: slate
+      primary: brown
+      accent: red
+      toggle:
+        icon: material/weather-sunny
+    - scheme: default
+      primary: grey
+      accent: cyan
+      toggle:
+        icon: material/weather-night
+    - scheme: slate
+      primary: grey
+      accent: cyan
+      toggle:
+        icon: material/weather-sunny
+
+        # icon: material/weather-night
+        # icon: material/weather-sunny
+        # icon: material/lightbulb-outline
+        # icon: material/lightbulb
+    
   features:
-    - navigation.tabs  # 顶部使用 Tab
-    - navigation.tabs.sticky  # 悬浮固定
+    # - navigation.tabs  # 顶部使用 Tab
+    # - navigation.tabs.sticky  # 悬浮固定
+    - navigation.sections  # 侧边栏多层级章节
     - navigation.path  # 面包屑导航
     - navigation.indexes  # 侧边栏索引
     - navigation.top  # 返回顶部
-    - navigation.sections  # 侧边栏多层级章节
     - search.suggest
     - search.highlight
     - content.code.copy  # 代码块添加复制按钮
+    - content.code.annotate
     - content.action.edit
 
 plugins:
   - search
+  - awesome-pages
   # - blog
 
-copyright: Copyright &copy; 2025 作者名称
+copyright: Copyright &copy; 2025 zhenda
 
 
 markdown_extensions:
