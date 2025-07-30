@@ -15,6 +15,8 @@ site_name: MkLorum
 # theme: readthedocs
 theme:
   name: material
+  # language: zh
+  # language: en
   features:
     # - navigation.tabs  # 顶部使用 Tab
     # - navigation.tabs.sticky  # 悬浮固定
@@ -99,6 +101,17 @@ theme:
 plugins:
   - search
   - awesome-pages
+  # - i18n:
+  #     default_language: zh
+  #     languages:
+  #       - locale: zh
+  #         name: 简体中文
+  #         default: true
+  #         build: true
+  #       - locale: en
+  #         name: English
+  #         build: true
+
   # - blog
 
 copyright: Copyright &copy; 2025 zhenda
@@ -155,6 +168,3 @@ markdown_extensions:
 extra_javascript:
   - js/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
-
-# user_color_mode_toggle: true
-# color_mode: dark
