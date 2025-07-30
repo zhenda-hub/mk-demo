@@ -15,17 +15,31 @@ site_name: MkLorum
 # theme: readthedocs
 theme:
   name: material
+  features:
+    # - navigation.tabs  # 顶部使用 Tab
+    # - navigation.tabs.sticky  # 悬浮固定
+    - navigation.expand  # 侧边栏默认展开
+    # - navigation.indexes  # 侧边栏索引
+    - navigation.path  # 面包屑导航
+    - navigation.top  # 返回顶部
+    - navigation.tracking  # 锚点跟踪
+    - search.suggest
+    - search.highlight
+    - content.code.copy  # 代码块添加复制按钮
+    - content.code.annotate
+    - content.action.edit
+    - toc.follow  # 侧边栏会自动滚动
   palette:
-    - scheme: default  # 浅色模式
-      primary: indigo  # 主色调：靛蓝
-      accent: blue     # 强调色：深蓝
-      toggle:
-        icon: material/weather-night
-    - scheme: slate    # 暗色模式
-      primary: indigo
-      accent: blue
-      toggle:
-        icon: material/weather-sunny
+    # - scheme: default  # 浅色模式
+    #   primary: indigo  # 主色调：靛蓝
+    #   accent: blue     # 强调色：深蓝
+    #   toggle:
+    #     icon: material/weather-night
+    # - scheme: slate    # 暗色模式
+    #   primary: indigo
+    #   accent: blue
+    #   toggle:
+    #     icon: material/weather-sunny
     - scheme: default
       primary: teal
       accent: light-green
@@ -46,26 +60,26 @@ theme:
       accent: purple
       toggle:
         icon: material/weather-sunny
-    - scheme: default
-      primary: orange
-      accent: amber
-      toggle:
-        icon: material/weather-night
-    - scheme: slate
-      primary: orange
-      accent: amber
-      toggle:
-        icon: material/weather-sunny
-    - scheme: default
-      primary: brown
-      accent: red
-      toggle:
-        icon: material/weather-night
-    - scheme: slate
-      primary: brown
-      accent: red
-      toggle:
-        icon: material/weather-sunny
+    # - scheme: default
+    #   primary: orange
+    #   accent: amber
+    #   toggle:
+    #     icon: material/weather-night
+    # - scheme: slate
+    #   primary: orange
+    #   accent: amber
+    #   toggle:
+    #     icon: material/weather-sunny
+    # - scheme: default
+    #   primary: brown
+    #   accent: red
+    #   toggle:
+    #     icon: material/weather-night
+    # - scheme: slate
+    #   primary: brown
+    #   accent: red
+    #   toggle:
+    #     icon: material/weather-sunny
     - scheme: default
       primary: grey
       accent: cyan
@@ -81,19 +95,6 @@ theme:
         # icon: material/weather-sunny
         # icon: material/lightbulb-outline
         # icon: material/lightbulb
-    
-  features:
-    # - navigation.tabs  # 顶部使用 Tab
-    # - navigation.tabs.sticky  # 悬浮固定
-    - navigation.sections  # 侧边栏多层级章节
-    - navigation.path  # 面包屑导航
-    - navigation.indexes  # 侧边栏索引
-    - navigation.top  # 返回顶部
-    - search.suggest
-    - search.highlight
-    - content.code.copy  # 代码块添加复制按钮
-    - content.code.annotate
-    - content.action.edit
 
 plugins:
   - search
