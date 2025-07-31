@@ -18,6 +18,8 @@ theme:
   # language: zh
   # language: en
   features:
+    - navigation.instant           # 即时导航
+    - navigation.instant.prefetch  # 即时导航预加载
     # - navigation.tabs  # 顶部使用 Tab
     # - navigation.tabs.sticky  # 悬浮固定
     - navigation.expand  # 侧边栏默认展开
@@ -25,12 +27,17 @@ theme:
     - navigation.path  # 面包屑导航
     - navigation.top  # 返回顶部
     - navigation.tracking  # 锚点跟踪
+    - navigation.footer    # 底部导航
+    # - navigation.sections      # 侧边栏展开不会折叠
     - search.suggest
     - search.highlight
+    # - search.share            # 搜索分享
     - content.code.copy  # 代码块添加复制按钮
-    - content.code.annotate
+    # - content.code.annotate
     - content.action.edit
+    - content.action.view
     - toc.follow  # 侧边栏会自动滚动
+    # - toc.integrate           # 目录集成
   palette:
     # - scheme: default  # 浅色模式
     #   primary: indigo  # 主色调：靛蓝
