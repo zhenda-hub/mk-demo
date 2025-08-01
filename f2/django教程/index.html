@@ -1,0 +1,3520 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../AI%E6%95%99%E7%A8%8B/">
+      
+      
+        <link rel="next" href="../docker%E6%8C%87%E5%8D%97/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Django教程 - MkLorum</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="MkLorum" class="md-header__button md-logo" aria-label="MkLorum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MkLorum
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Django教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-green"  aria-label=""  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="light-green"  aria-label=""  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label=""  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_3" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label=""  type="radio" name="__palette" id="__palette_3">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_4" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="grey" data-md-color-accent="cyan"  aria-label=""  type="radio" name="__palette" id="__palette_4">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_5" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="cyan"  aria-label=""  type="radio" name="__palette" id="__palette_5">
+    
+      <label class="md-header__button md-icon" title="" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="MkLorum" class="md-nav__button md-logo" aria-label="MkLorum" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    MkLorum
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HOME
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ABOUT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📋 Material for MkDocs 提示框完整指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Blog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Posts
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/app-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    App design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/browser/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Browser
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/cloud-servers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cloud servers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/posts/computer-science-crash-course/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Computer science crash course
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    F1
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            F1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f1/Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Decentralization
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f1/algorithm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algorithm
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f1/crawler/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crawler
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f1/css-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Css guide
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f1/databases/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Databases
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    F2
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            F2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AI教程
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Django教程
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Django教程
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站开发逻辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      通信协议
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据获取方式总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据获取方式总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      http
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发布/订阅消息传输协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="发布/订阅消息传输协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      mqtt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      kafka
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      前后端数据交互的类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前后端数据交互的类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      header 请求头:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      body 请求体:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      query params:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站开发逻辑梳理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网站开发逻辑梳理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      初级阶段，使用 admin 后台快速建站
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      邮件重置密码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="邮件重置密码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接编写后台逻辑和前台模板页面
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      嵌套的 url
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="具体功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      认证 jwt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户和邮箱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步任务和定时任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="异步任务和定时任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      定时任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      前后端分离
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前后端分离">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      api
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drf" class="md-nav__link">
+    <span class="md-ellipsis">
+      DRF
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DRF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      drf 源码逻辑
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网站部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      公共服务, 一起安装起来
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      端口管理：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="nginx配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx配置多个项目
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django" class="md-nav__link">
+    <span class="md-ellipsis">
+      django 源码风格
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关文档
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      CORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../docker%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Docker指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emoji-support/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Emoji support
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    F3
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            F3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f3/english-stu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    English stu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f3/evangelism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evangelism
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f3/excel-note/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Excel note
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../f3/fastapi-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fastapi tutorial
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站开发逻辑
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      通信协议
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据获取方式总结
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据获取方式总结">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http" class="md-nav__link">
+    <span class="md-ellipsis">
+      http
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      发布/订阅消息传输协议
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="发布/订阅消息传输协议">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mqtt" class="md-nav__link">
+    <span class="md-ellipsis">
+      mqtt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      kafka
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      前后端数据交互的类型
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前后端数据交互的类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      header 请求头:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#body" class="md-nav__link">
+    <span class="md-ellipsis">
+      body 请求体:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-params" class="md-nav__link">
+    <span class="md-ellipsis">
+      query params:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站开发逻辑梳理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网站开发逻辑梳理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      初级阶段，使用 admin 后台快速建站
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      邮件重置密码
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="邮件重置密码">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接编写后台逻辑和前台模板页面
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    <span class="md-ellipsis">
+      嵌套的 url
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体功能
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="具体功能">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jwt" class="md-nav__link">
+    <span class="md-ellipsis">
+      认证 jwt
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      用户和邮箱
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      异步任务和定时任务
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="异步任务和定时任务">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      定时任务
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      缓存
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      查询优化
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      前后端分离
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前后端分离">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      api
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="api">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#drf" class="md-nav__link">
+    <span class="md-ellipsis">
+      DRF
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DRF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#serializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#viewset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Viewset
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagination" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagination
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drf_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      drf 源码逻辑
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      网站部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="网站部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      公共服务, 一起安装起来
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      端口管理：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nginx" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="nginx配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nginx配置多个项目
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#django" class="md-nav__link">
+    <span class="md-ellipsis">
+      django 源码风格
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      相关文档
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="常见问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cors" class="md-nav__link">
+    <span class="md-ellipsis">
+      CORS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSRF
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Django教程</h1>
+
+<p>+++
+title = 'Django教程'
+subtitle = ""
+date = 2024-04-30T14:07:14+08:00
+draft = false
+toc = true
+tags = ["web"]
++++</p>
+<p>[toc]</p>
+<h2 id="_1">网站开发逻辑<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>数据</li>
+<li>页面</li>
+<li>api</li>
+</ul>
+<h2 id="_2">通信协议<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>层级</th>
+<th>协议及描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>应用层</strong></td>
+<td>- <strong>HTTP</strong>: 网页浏览的基础协议，用于传输网页内容。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>HTTPS</strong>: HTTP 的加密版本。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>FTP</strong>: 文件传输协议。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>SMTP</strong>: 简单邮件传输协议，用于发送电子邮件。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>POP3</strong>: 用于接收电子邮件。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>IMAP</strong>: 用于同步和管理电子邮件。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>DNS</strong>: 将域名解析为 IP 地址。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>SSH</strong>: 安全远程管理协议。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Telnet</strong>: 早期的远程登录协议，已被 SSH 取代。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>WebSocket</strong>: 用于建立持久的双向通信。</td>
+</tr>
+<tr>
+<td><strong>传输层</strong></td>
+<td>- <strong>TCP</strong>: 面向连接的协议，提供可靠的数据传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>UDP</strong>: 无连接的协议，适用于实时应用。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>QUIC</strong>: 基于 UDP 的新传输层协议，提供更高的效率。</td>
+</tr>
+<tr>
+<td><strong>网络层</strong></td>
+<td>- <strong>IP</strong>: 网络层的基本协议，负责数据包的传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>IPv4</strong>: 使用 32 位地址。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>IPv6</strong>: 使用 128 位地址，解决 IP 地址枯竭问题。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>ICMP</strong>: 网络诊断信息协议（如 ping）。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>ARP</strong>: 将 IP 地址解析为物理地址。</td>
+</tr>
+<tr>
+<td><strong>数据链路层</strong></td>
+<td>- <strong>Ethernet</strong>: 局域网的有线通信协议。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Wi-Fi</strong>: 无线局域网协议。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>PPP</strong>: 点对点协议，用于数据传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>STP</strong>: 防止网络环路的生成树协议。</td>
+</tr>
+<tr>
+<td><strong>物理层</strong></td>
+<td>- <strong>Ethernet（物理层部分）</strong>: 定义电信号如何传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Wi-Fi（物理层部分）</strong>: 定义无线信号的传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>Bluetooth</strong>: 短距离无线通信协议。</td>
+</tr>
+<tr>
+<td><strong>会话层、表示层</strong></td>
+<td>- <strong>SSL/TLS</strong>: 提供加密连接，保护数据传输。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>RPC</strong>: 允许远程过程调用。</td>
+</tr>
+<tr>
+<td><strong>其他协议</strong></td>
+<td>- <strong>MQTT</strong>: 轻量级发布/订阅消息协议，适用于物联网。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>AMQP</strong>: 企业级消息队列协议。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>gRPC</strong>: 基于 HTTP/2 的远程过程调用框架。</td>
+</tr>
+<tr>
+<td></td>
+<td>- <strong>SFTP</strong>: 基于 SSH 的安全文件传输协议。</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>HTTP</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>请求方式</th>
+<th>传参方式</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>查询字符串 (Query Parameters)</td>
+<td><code>GET /users?id=123</code></td>
+</tr>
+<tr>
+<td></td>
+<td>路径参数 (Path Parameters)</td>
+<td><code>GET /users/123</code></td>
+</tr>
+<tr>
+<td></td>
+<td>请求头 (Headers)</td>
+<td><code>Authorization: Bearer token</code></td>
+</tr>
+<tr>
+<td>POST</td>
+<td>请求体 (Request Body)</td>
+<td><code>POST /users</code><br><code>{ "name": "John", "age": 30 }</code></td>
+</tr>
+<tr>
+<td></td>
+<td>表单数据 (Form Data)</td>
+<td><code>POST /users</code><br><code>name=John&amp;age=30</code></td>
+</tr>
+<tr>
+<td></td>
+<td>请求头 (Headers)</td>
+<td><code>Content-Type: application/json</code></td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>请求体 (Request Body)</td>
+<td><code>PUT /users/123</code><br><code>{ "name": "Jane", "age": 25 }</code></td>
+</tr>
+<tr>
+<td></td>
+<td>路径参数 (Path Parameters)</td>
+<td><code>PUT /users/123</code></td>
+</tr>
+<tr>
+<td></td>
+<td>请求头 (Headers)</td>
+<td><code>Content-Type: application/json</code></td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>请求体 (Request Body)</td>
+<td><code>PATCH /users/123</code><br><code>{ "age": 31 }</code></td>
+</tr>
+<tr>
+<td></td>
+<td>路径参数 (Path Parameters)</td>
+<td><code>PATCH /users/123</code></td>
+</tr>
+<tr>
+<td></td>
+<td>请求头 (Headers)</td>
+<td><code>Content-Type: application/json</code></td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>路径参数 (Path Parameters)</td>
+<td><code>DELETE /users/123</code></td>
+</tr>
+<tr>
+<td></td>
+<td>请求头 (Headers)</td>
+<td><code>Authorization: Bearer token</code></td>
+</tr>
+</tbody>
+</table>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>-   get
+<span class="linenos" data-linenos=" 2 "></span>    -   url传参(对数据长度有限制(大约 2048 个字符)
+<span class="linenos" data-linenos=" 3 "></span>        -   http://example.com/api?k1=v1&amp;k2=v2
+<span class="linenos" data-linenos=" 4 "></span>-   post
+<span class="linenos" data-linenos=" 5 "></span>    -   传参
+<span class="linenos" data-linenos=" 6 "></span>        -   类型
+<span class="linenos" data-linenos=" 7 "></span>            -   request header
+<span class="linenos" data-linenos=" 8 "></span>                -   Content-Type 指明数据格式
+<span class="linenos" data-linenos=" 9 "></span>            -   request body
+<span class="linenos" data-linenos="10 "></span>                -   json
+<span class="linenos" data-linenos="11 "></span>                -   form-data
+<span class="linenos" data-linenos="12 "></span>                -   text
+<span class="linenos" data-linenos="13 "></span>        -   url传参 
+<span class="linenos" data-linenos="14 "></span>-   put
+<span class="linenos" data-linenos="15 "></span>    -   传参同 post, 只是需要对象存在
+<span class="linenos" data-linenos="16 "></span>-   delete
+</code></pre></div>
+<h2 id="_3">数据获取方式总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>方式</th>
+<th>描述</th>
+<th>适用场景</th>
+<th>优点</th>
+<th>缺点</th>
+<th>市场占有率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>文件系统</td>
+<td>读取本地或远程文件</td>
+<td>静态数据存储</td>
+<td>简单易用</td>
+<td>访问速度可能较慢</td>
+<td>极高</td>
+</tr>
+<tr>
+<td>爬虫</td>
+<td>从网页抓取数据</td>
+<td>数据采集、信息挖掘</td>
+<td>获取大量数据</td>
+<td>可能违反网站的爬虫协议</td>
+<td>较高，但因法律法规限制而波动</td>
+</tr>
+<tr>
+<td>SQL数据库</td>
+<td>结构化数据存储和查询</td>
+<td>大量结构化数据的存储和查询</td>
+<td>数据一致性强、查询灵活</td>
+<td>可能存在性能瓶颈</td>
+<td>极高</td>
+</tr>
+<tr>
+<td>NoSQL数据库</td>
+<td>非关系型数据库</td>
+<td>海量非结构化数据存储</td>
+<td>灵活扩展、高性能</td>
+<td>数据模型设计复杂</td>
+<td>较高，尤其在大数据领域</td>
+</tr>
+<tr>
+<td><strong>HTTP</strong></td>
+<td>超文本传输协议，最常用的请求-响应式通信协议。</td>
+<td>Web 应用、API 调用、文件传输等。</td>
+<td>简单、成熟、广泛支持，适用于大多数应用场景。</td>
+<td>不支持实时双向通信，高延迟，不适用于需要频繁更新的场景。</td>
+<td><strong>极高</strong>（几乎所有 Web 应用都依赖）</td>
+</tr>
+<tr>
+<td><strong>TCP/UDP</strong></td>
+<td>低级网络通信协议，允许通过套接字进行直接的数据传输。TCP 提供可靠传输，UDP 提供不可靠但快速的传输。</td>
+<td>实时视频/音频流、在线游戏、文件传输、自定义协议实现等。</td>
+<td>低延迟、高灵活性，适用于高性能和实时性要求的应用。</td>
+<td>需要手动管理连接和错误处理，开发复杂度高，UDP 不保证数据传输的可靠性。</td>
+<td><strong>高</strong>（基础通信协议，应用广泛）</td>
+</tr>
+<tr>
+<td><strong>Email/SMS</strong></td>
+<td>通过电子邮件或短信发送数据或通知的方式。</td>
+<td>用户通知、报警系统、验证消息、营销活动等。</td>
+<td>覆盖面广、易于使用，适用于发送重要通知和广泛传播信息。</td>
+<td>延迟较高，不适合实时性要求高的场景，短信的全球覆盖可能受限。</td>
+<td><strong>高</strong>（传统通信方式，普及率高）</td>
+</tr>
+<tr>
+<td><strong>MQTT</strong></td>
+<td>轻量级的发布/订阅消息传输协议，适用于资源受限设备和不稳定网络环境。</td>
+<td>物联网（IoT）、传感器数据收集、智能家居设备通信等。</td>
+<td>低带宽开销、实时性好、支持不稳定网络环境。</td>
+<td>传输量小，支持较为基础，不适合处理复杂的数据结构或大规模数据。</td>
+<td><strong>较高</strong>，尤其在IoT领域</td>
+</tr>
+<tr>
+<td><strong>Kafka</strong></td>
+<td>分布式流处理平台，用于构建实时数据管道和流应用，基于发布/订阅消息传输模式。</td>
+<td>大数据处理、日志聚合、事件流处理、实时分析等。</td>
+<td>高吞吐量、高可扩展性、适用于大规模数据流处理。</td>
+<td>需要较复杂的部署和维护，学习曲线较陡，延迟可能较高。</td>
+<td><strong>较高</strong>，尤其在大数据和流处理领域</td>
+</tr>
+<tr>
+<td><strong>WebSocket</strong></td>
+<td>全双工通信协议，允许服务器和客户端之间进行实时双向通信。</td>
+<td>实时聊天、在线游戏、股票行情推送、实时通知等。</td>
+<td>实时性强、低延迟、适合需要频繁数据更新的应用。</td>
+<td>不适合长时间空闲连接，占用资源多，不适用于传输大数据量的场景。</td>
+<td>中（实时应用逐渐普及）</td>
+</tr>
+<tr>
+<td><strong>gRPC</strong></td>
+<td>高性能、开源的远程过程调用（RPC）框架，基于 HTTP/2 协议，使用 Protocol Buffers 进行数据序列化。</td>
+<td>微服务架构、分布式系统、移动设备与后端服务通信等。</td>
+<td>高效、支持多语言、支持双向流式通信、强类型定义。</td>
+<td>使用复杂，依赖于 HTTP/2 和 Protocol Buffers，不如 REST API 普及。</td>
+<td>中（微服务架构中逐渐普及）</td>
+</tr>
+<tr>
+<td>AMQP</td>
+<td>高级消息队列协议，提供消息的安全、可靠传输，支持复杂的消息路由和队列机制。</td>
+<td>企业消息系统、分布式应用、金融交易系统、微服务通信等。</td>
+<td>功能丰富、可靠性高、支持事务和队列，适用于复杂的消息传递需求。</td>
+<td>协议复杂，学习成本高，部署和维护难度较大。</td>
+<td>中（企业级消息系统使用广泛）</td>
+</tr>
+<tr>
+<td>Webhooks</td>
+<td>基于 HTTP 回调的事件驱动通信方式，当特定事件发生时，一个系统向另一个系统发送通知。</td>
+<td>事件通知、第三方服务集成、自动化工作流程等。</td>
+<td>简单、即时通知、易于集成，减少轮询需求。</td>
+<td>无法保证消息的送达率或顺序，需要处理重复或丢失的消息。</td>
+<td>中（被广泛用于自动化通知）</td>
+</tr>
+<tr>
+<td>FTP/SFTP</td>
+<td>文件传输协议</td>
+<td>文件传输</td>
+<td>简单易用</td>
+<td>速度较慢、安全性较低（FTP）</td>
+<td>中等，逐渐被SFTP和更安全的协议替代</td>
+</tr>
+<tr>
+<td>NFS</td>
+<td>网络文件系统</td>
+<td>共享文件系统</td>
+<td>方便共享文件</td>
+<td>配置复杂</td>
+<td>中等，主要用于内部网络</td>
+</tr>
+<tr>
+<td>P2P</td>
+<td>点对点通信方式，设备之间直接连接并交换数据，无需中心服务器。</td>
+<td>文件共享、区块链网络、分布式计算、实时通信应用等。</td>
+<td>去中心化、可扩展性强、资源利用高效，适用于分布式和去中心化的应用场景。</td>
+<td>依赖节点的可用性，可能导致数据传输不稳定，网络连接管理复杂。</td>
+<td>中（去中心化应用领域使用）</td>
+</tr>
+<tr>
+<td>XMPP</td>
+<td>即时消息和在线协作协议</td>
+<td>即时通讯、在线协作</td>
+<td>功能丰富</td>
+<td>社区相对较小</td>
+<td>较低</td>
+</tr>
+<tr>
+<td>CoAP</td>
+<td>专为物联网设备设计的轻量级协议，基于 UDP，类似于精简版的 HTTP。</td>
+<td>低功耗、资源受限的设备通信，如传感器网络、智能城市等。</td>
+<td>轻量级、低开销、支持组播，适用于受限环境。</td>
+<td>基于 UDP 传输，可靠性不如 TCP，适用场景有限，功能较简单。</td>
+<td>低（物联网中逐渐普及）</td>
+</tr>
+</tbody>
+</table>
+<h3 id="http">http<a class="headerlink" href="#http" title="Permanent link">&para;</a></h3>
+<p>requests 同步请求
+httpx 异步请求</p>
+<h3 id="_4">发布/订阅消息传输协议<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<h4 id="mqtt">mqtt<a class="headerlink" href="#mqtt" title="Permanent link">&para;</a></h4>
+<p>核心概念:</p>
+<table>
+<thead>
+<tr>
+<th>名词</th>
+<th>概念</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Broker</td>
+<td>消息代理，负责接收、存储和转发消息到订阅者。</td>
+</tr>
+<tr>
+<td>Client</td>
+<td>客户端，可以是发布者或订阅者。</td>
+</tr>
+<tr>
+<td>Topic</td>
+<td>主题，用于标识消息的分类和路由。</td>
+</tr>
+<tr>
+<td>Message</td>
+<td>消息，由发布者发送并由代理转发给订阅者。</td>
+</tr>
+<tr>
+<td>Subscription</td>
+<td>订阅，客户端订阅一个或多个主题，以接收相关的消息。</td>
+</tr>
+<tr>
+<td>Publication</td>
+<td>发布，客户端发布消息到某个主题。</td>
+</tr>
+</tbody>
+</table>
+<p>关系流程:</p>
+<pre class="mermaid"><code>graph TD
+    ClientA[Client A: Publisher] --&gt;|Publish| Broker((MQTT Broker))
+    ClientB[Client B: Publisher] --&gt;|Publish| Broker
+    Broker --&gt;|Forward| ClientC[Client C: Subscriber]
+    Broker --&gt;|Forward| ClientD[Client D: Subscriber]
+</code></pre>
+<h4 id="kafka">kafka<a class="headerlink" href="#kafka" title="Permanent link">&para;</a></h4>
+<p>特点: 提供持久性存储</p>
+<p>关系流程:</p>
+<pre class="mermaid"><code>flowchart LR
+    subgraph Producers[生产者]
+        P[Producer]
+    end
+
+    subgraph Kafka[Kafka Cluster]
+        subgraph Broker1[Broker Leader]
+            T1[Topic-Partition1]
+        end
+
+        subgraph Broker2[Broker Follower]
+            R1[Replica]
+        end
+    end
+
+    subgraph Consumers[消费者]
+        C1[Consumer Group]
+    end
+
+    %% 核心流程
+    P --&gt;|1.发送消息| T1
+    T1 --&gt;|2.同步复制| R1
+    T1 --&gt;|3.消费消息| C1
+
+    %% 添加说明
+    classDef broker fill:#f9f,stroke:#333,stroke-width:2px;
+    class Broker1,Broker2 broker;</code></pre>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">kafka</span><span class="w"> </span><span class="kn">import</span> <span class="n">KafkaConsumer</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kn">import</span><span class="w"> </span><span class="nn">json</span> 
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="n">consumer</span> <span class="o">=</span> <span class="n">KafkaConsumer</span><span class="p">(</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="s1">&#39;your_topic_name&#39;</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">bootstrap_servers</span><span class="o">=</span><span class="s1">&#39;your_kafka_broker:9092&#39;</span><span class="p">,</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">group_id</span><span class="o">=</span><span class="s1">&#39;your_consumer_group&#39;</span><span class="p">,</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">value_deserializer</span><span class="o">=</span><span class="k">lambda</span> <span class="n">v</span><span class="p">:</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>  <span class="c1"># Deserialize JSON</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a><span class="c1"># 阻塞</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><a href="#__codelineno-0-12"><span class="linenos" data-linenos="12 "></span></a><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">consumer</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><a href="#__codelineno-0-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="o">...</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><a href="#__codelineno-0-14"><span class="linenos" data-linenos="14 "></span></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><a href="#__codelineno-0-15"><span class="linenos" data-linenos="15 "></span></a><span class="c1"># 非阻塞</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><a href="#__codelineno-0-16"><span class="linenos" data-linenos="16 "></span></a><span class="k">while</span> <span class="mi">1</span><span class="p">:</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a>    <span class="k">for</span> <span class="n">topic</span><span class="p">,</span> <span class="n">msg</span> <span class="ow">in</span> <span class="n">consumer</span><span class="o">.</span><span class="n">poll</span><span class="p">():</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><a href="#__codelineno-0-18"><span class="linenos" data-linenos="18 "></span></a>        <span class="o">...</span>
+</span></code></pre></div>
+<p>常见问题:</p>
+<p>kafka nobrokersavailable</p>
+<h2 id="_5">前后端数据交互的类型<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<h3 id="header">header 请求头:<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>包含了基本的请求信息, method, url, 协议, 和一些 kv.</p>
+<p>常见kv如下:</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accept</td>
+<td>客户端可接受的响应类型</td>
+</tr>
+<tr>
+<td>Accept-Language</td>
+<td>客户端可接受的语言</td>
+</tr>
+<tr>
+<td>Content-Type</td>
+<td>body数据类型</td>
+</tr>
+<tr>
+<td>Cookie</td>
+<td>用于用户认证</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>请求服务器地址</td>
+</tr>
+<tr>
+<td>User-Agent</td>
+<td>客户端信息</td>
+</tr>
+</tbody>
+</table>
+<h3 id="body">body 请求体:<a class="headerlink" href="#body" title="Permanent link">&para;</a></h3>
+<p>数据类型 在header里的 <strong>Content-Type</strong> 可以查看</p>
+<p>有三种数据格式:</p>
+<ul>
+<li>application/json
+<div class="language-json highlight"><span class="filename">JSON</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="err">user</span><span class="kc">na</span><span class="err">me</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;joh</span><span class="kc">n</span><span class="err">_doe&#39;</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="err">email</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;joh</span><span class="kc">n</span><span class="err">@example.com&#39;</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="err">age</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+</span></code></pre></div></li>
+<li>form</li>
+<li>application/x-www-form-urlencoded<ul>
+<li><code>username=john_doe&amp;email=john@example.com</code></li>
+</ul>
+</li>
+<li>multipart/form-data<ul>
+<li>上传文件</li>
+</ul>
+</li>
+</ul>
+<h3 id="query-params">query params:<a class="headerlink" href="#query-params" title="Permanent link">&para;</a></h3>
+<p><code>/api/users?username=john_doe&amp;email=john@example.com</code></p>
+<h2 id="_6">网站开发逻辑梳理<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>前端</li>
+<li>template</li>
+<li>form</li>
+<li>后端</li>
+<li>model</li>
+<li>view</li>
+<li>url</li>
+</ul>
+<h3 id="admin">初级阶段，使用 admin 后台快速建站<a class="headerlink" href="#admin" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.djangoproject.com/en/5.1/ref/models/fields/#:~:text=ForeignKey">https://docs.djangoproject.com/en/5.1/ref/models/fields/#:~:text=ForeignKey</a></p>
+<p>Field:</p>
+<div class="language-text highlight"><span class="filename">Text Only</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>null=True  # 数据库层面
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>blank=True  # 表单层面
+</span></code></pre></div>
+<ul>
+<li>
+<p>model</p>
+<ul>
+<li>model 分类<ul>
+<li>普通的继承</li>
+<li>abstruct 抽象基类</li>
+<li>proxy 添加额外的方法</li>
+</ul>
+</li>
+<li>模型管理器<ul>
+<li>objects =</li>
+</ul>
+</li>
+<li>自定义 BaseModel</li>
+</ul>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">BaseModel</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;为模型类补充字段&quot;&quot;&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a>    <span class="n">create_time</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;创建时间&#39;</span><span class="p">,</span> <span class="n">auto_now_add</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="n">update_time</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;更新时间&#39;</span><span class="p">,</span> <span class="n">auto_now</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos="5 "></span></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos="6 "></span></a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos="7 "></span></a>        <span class="c1"># 说明是抽象模型类</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos="8 "></span></a>        <span class="n">abstract</span> <span class="o">=</span> <span class="kc">True</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">ProjectModel</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;项目&quot;&quot;&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a>    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;用户&#39;</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;项目名&#39;</span><span class="p">,</span> <span class="n">max_length</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">what</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;项目描述&#39;</span><span class="p">)</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">why</span> <span class="o">=</span> <span class="n">RichTextUploadingField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;项目意义&#39;</span><span class="p">)</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">priority_choices</span> <span class="o">=</span> <span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;不重要不紧急&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;不重要紧急&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;重要不紧急&#39;</span><span class="p">),</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;重要紧急&#39;</span><span class="p">))</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="n">priority</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">IntegerField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;优先级&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">choices</span><span class="o">=</span><span class="n">priority_choices</span><span class="p">)</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="n">public</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;是否公开&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12"></a><a href="#__codelineno-4-12"><span class="linenos" data-linenos="12 "></span></a>    <span class="n">start_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;计划开始日期&#39;</span><span class="p">)</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13"></a><a href="#__codelineno-4-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="n">end_date</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">DateField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;计划完成日期&#39;</span><span class="p">)</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14"></a><a href="#__codelineno-4-14"><span class="linenos" data-linenos="14 "></span></a>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15"></a><a href="#__codelineno-4-15"><span class="linenos" data-linenos="15 "></span></a>    <span class="c1"># how = RichTextUploadingField(verbose_name=&#39;执行步骤&#39;, config_name=&#39;default&#39;)</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16"></a><a href="#__codelineno-4-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="n">how</span> <span class="o">=</span> <span class="n">MDTextField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;执行步骤&#39;</span><span class="p">)</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17"></a><a href="#__codelineno-4-17"><span class="linenos" data-linenos="17 "></span></a>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18"></a><a href="#__codelineno-4-18"><span class="linenos" data-linenos="18 "></span></a>    <span class="n">attachments</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FileField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;附件&#39;</span><span class="p">,</span> <span class="n">upload_to</span><span class="o">=</span><span class="s1">&#39;attachments/%Y/%m/</span><span class="si">%d</span><span class="s1">/&#39;</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19"></a><a href="#__codelineno-4-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="n">status</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">BooleanField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;是否完成&#39;</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20"></a><a href="#__codelineno-4-20"><span class="linenos" data-linenos="20 "></span></a>    <span class="n">think</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;项目感想&#39;</span><span class="p">,</span> <span class="n">null</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">blank</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21"></a><a href="#__codelineno-4-21"><span class="linenos" data-linenos="21 "></span></a>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22"></a><a href="#__codelineno-4-22"><span class="linenos" data-linenos="22 "></span></a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23"></a><a href="#__codelineno-4-23"><span class="linenos" data-linenos="23 "></span></a>        <span class="n">verbose_name</span> <span class="o">=</span> <span class="s1">&#39;项目&#39;</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24"></a><a href="#__codelineno-4-24"><span class="linenos" data-linenos="24 "></span></a>        <span class="n">verbose_name_plural</span> <span class="o">=</span> <span class="n">verbose_name</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25"></a><a href="#__codelineno-4-25"><span class="linenos" data-linenos="25 "></span></a>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26"></a><a href="#__codelineno-4-26"><span class="linenos" data-linenos="26 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27"></a><a href="#__codelineno-4-27"><span class="linenos" data-linenos="27 "></span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+</span></code></pre></div>
+</li>
+<li>
+<p>admin 后台管理</p>
+<ul>
+<li>
+<p>管理模型类</p>
+<ul>
+<li>添加模型类到 admin
+    <div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1"># 直接添加</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">ProjectModel</span><span class="p">)</span>
+</span></code></pre></div></li>
+<li>
+<p>自定义模型类的功能页面</p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># 自定义模型类的admin</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">ProjectModelAdmin</span><span class="p">(</span><span class="n">admin</span><span class="o">.</span><span class="n">ModelAdmin</span><span class="p">):</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos=" 3 "></span></a>    <span class="c1"># list页面</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="n">list_display</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;priority&#39;</span><span class="p">,</span> <span class="s1">&#39;end_date&#39;</span><span class="p">,</span> <span class="s1">&#39;duration&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">]</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">list_filter</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;priority&#39;</span><span class="p">,</span> <span class="s1">&#39;end_date&#39;</span><span class="p">]</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;why&#39;</span><span class="p">,</span> <span class="s1">&#39;how&#39;</span><span class="p">,</span> <span class="s1">&#39;think&#39;</span><span class="p">]</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">,</span> <span class="s1">&#39;-priority&#39;</span><span class="p">,</span> <span class="s1">&#39;end_date&#39;</span><span class="p">]</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8"></a><a href="#__codelineno-6-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="c1"># detail页面</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9"></a><a href="#__codelineno-6-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="n">readonly_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span>  <span class="c1"># 只读字段，不能编辑</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10"></a><a href="#__codelineno-6-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11"></a><a href="#__codelineno-6-11"><span class="linenos" data-linenos="11 "></span></a><span class="c1"># 添加自定义的ProjectModelAdmin</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12"></a><a href="#__codelineno-6-12"><span class="linenos" data-linenos="12 "></span></a><span class="n">admin</span><span class="o">.</span><span class="n">site</span><span class="o">.</span><span class="n">register</span><span class="p">(</span><span class="n">ProjectModel</span><span class="p">,</span> <span class="n">ProjectModelAdmin</span><span class="p">)</span>
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<h2 id="_7">邮件重置密码<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">直接编写后台逻辑和前台模板页面<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p><a href="https://python.plainenglish.io/building-a-basic-crud-using-django-b218d6859206">https://python.plainenglish.io/building-a-basic-crud-using-django-b218d6859206</a></p>
+<ul>
+<li>url<ul>
+<li>include()<ul>
+<li>name</li>
+<li>namespace</li>
+</ul>
+</li>
+<li>view 中访问<ul>
+<li>reverse()</li>
+</ul>
+</li>
+<li>基本格式<ul>
+<li>''</li>
+<li>create/</li>
+<li>\&lt;int:pk&gt;/</li>
+<li>\&lt;int:pk&gt;/update/</li>
+<li>\&lt;int:pk&gt;/delete/</li>
+</ul>
+</li>
+<li>传参数<ul>
+<li>使用&lt;&gt;来传参</li>
+</ul>
+</li>
+<li>
+<h2 id="url">嵌套的 url<a class="headerlink" href="#url" title="Permanent link">&para;</a></h2>
+</li>
+</ul>
+</li>
+<li>
+<p>view</p>
+<ul>
+<li>概念：处理请求， 返回响应。通常会操作数据库</li>
+<li>请求和响应<ul>
+<li>https://docs.djangoproject.com/zh-hans/5.0/ref/request-response/</li>
+<li>HttpRequest<ul>
+<li>可以在中间件中设置各种需要的属性</li>
+<li>GET</li>
+<li>POST</li>
+<li>body</li>
+</ul>
+</li>
+<li>HttpResponse<ul>
+<li>分类<ul>
+<li>HttpResponse</li>
+<li>JsonResponse / drf 的 Response</li>
+<li>render</li>
+<li>redirect</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数据库操作<ul>
+<li>
+<p>https://docs.djangoproject.com/en/5.0/ref/models/querysets/#get
+    <div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.db.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Q</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos=" 2 "></span></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="c1"># 查询</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">**</span><span class="n">dct</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="n">Entry</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">order_by</span><span class="p">(</span><span class="s2">&quot;blog__name&quot;</span><span class="p">,</span> <span class="s2">&quot;headline&quot;</span><span class="p">)</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6"></a><a href="#__codelineno-7-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="n">Poll</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">Q</span><span class="p">(</span><span class="n">question__startswith</span><span class="o">=</span><span class="s2">&quot;Who&quot;</span><span class="p">),</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8"></a><a href="#__codelineno-7-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">Q</span><span class="p">(</span><span class="n">pub_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">pub_date</span><span class="o">=</span><span class="n">date</span><span class="p">(</span><span class="mi">2005</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)),</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9"></a><a href="#__codelineno-7-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="p">)</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10"></a><a href="#__codelineno-7-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11"></a><a href="#__codelineno-7-11"><span class="linenos" data-linenos="11 "></span></a><span class="c1"># 增改删</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12"></a><a href="#__codelineno-7-12"><span class="linenos" data-linenos="12 "></span></a><span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="o">**</span><span class="n">dct</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13"></a><a href="#__codelineno-7-13"><span class="linenos" data-linenos="13 "></span></a><span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">update_or_create</span><span class="p">(</span><span class="o">**</span><span class="n">dct</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14"></a><a href="#__codelineno-7-14"><span class="linenos" data-linenos="14 "></span></a><span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="o">**</span><span class="n">dct</span><span class="p">)</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</span></code></pre></div></p>
+<p><div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># update_or_create</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="n">defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">}</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="n">create_defaults</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;birthday&quot;</span><span class="p">:</span> <span class="n">date</span><span class="p">(</span><span class="mi">1940</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">)}</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5"></a><a href="#__codelineno-8-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">obj</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;Lennon&quot;</span><span class="p">)</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6"></a><a href="#__codelineno-8-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">defaults</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7"></a><a href="#__codelineno-8-7"><span class="linenos" data-linenos=" 7 "></span></a>        <span class="nb">setattr</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8"></a><a href="#__codelineno-8-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">obj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9"></a><a href="#__codelineno-8-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="k">except</span> <span class="n">Person</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10"></a><a href="#__codelineno-8-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="n">new_values</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Lennon&quot;</span><span class="p">}</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11"></a><a href="#__codelineno-8-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="n">new_values</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">create_defaults</span><span class="p">)</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12"></a><a href="#__codelineno-8-12"><span class="linenos" data-linenos="12 "></span></a>    <span class="n">obj</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="o">**</span><span class="n">new_values</span><span class="p">)</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13"></a><a href="#__codelineno-8-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="n">obj</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14"></a><a href="#__codelineno-8-14"><span class="linenos" data-linenos="14 "></span></a>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15"></a><a href="#__codelineno-8-15"><span class="linenos" data-linenos="15 "></span></a><span class="n">obj</span><span class="p">,</span> <span class="n">created</span> <span class="o">=</span> <span class="n">Person</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">update_or_create</span><span class="p">(</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16"></a><a href="#__codelineno-8-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="n">first_name</span><span class="o">=</span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17"></a><a href="#__codelineno-8-17"><span class="linenos" data-linenos="17 "></span></a>    <span class="n">last_name</span><span class="o">=</span><span class="s2">&quot;Lennon&quot;</span><span class="p">,</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18"></a><a href="#__codelineno-8-18"><span class="linenos" data-linenos="18 "></span></a>    <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">},</span>  <span class="c1"># 更新的数据</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19"></a><a href="#__codelineno-8-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="n">create_defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;birthday&quot;</span><span class="p">:</span> <span class="n">date</span><span class="p">(</span><span class="mi">1940</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">)},</span>  <span class="c1"># 创建的数据</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20"></a><a href="#__codelineno-8-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">)</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21"></a><a href="#__codelineno-8-21"><span class="linenos" data-linenos="21 "></span></a>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22"></a><a href="#__codelineno-8-22"><span class="linenos" data-linenos="22 "></span></a><span class="c1"># 分组</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23"></a><a href="#__codelineno-8-23"><span class="linenos" data-linenos="23 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.db.omdels</span><span class="w"> </span><span class="kn">import</span> <span class="n">Count</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24"></a><a href="#__codelineno-8-24"><span class="linenos" data-linenos="24 "></span></a><span class="c1"># [{&#39;type1&#39;: xxx, &#39;type2&#39;: xxx, &#39;id&#39;: xxx}]</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25"></a><a href="#__codelineno-8-25"><span class="linenos" data-linenos="25 "></span></a><span class="n">type1_lst</span> <span class="o">=</span> <span class="n">MyModel</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">values</span><span class="p">(</span><span class="s1">&#39;type1&#39;</span><span class="p">,</span> <span class="s1">&#39;type2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="n">count</span><span class="o">=</span><span class="n">Count</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">))</span>
+</span></code></pre></div>
+    -   FBV
+        -   很直观，完全自主可控的写法
+    -   CBV
+        -   django提供了一些类来作为view, 不是很好用
+    -   状态码
+        |代码|含义|
+        | --- | --- |
+        | 200 | ok |
+        | 400 | bad request |
+        | 401 | auth fail |
+        | 403 | permission |
+        | 404 | not found |
+        | 500 | server error |
+    -   中间件， 钩子
+        -   概念：在HttpRequest到达view的前后，自定义额外的处理逻辑</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>template</p>
+<ul>
+<li>页面的主要类型<ul>
+<li>list</li>
+<li>detail</li>
+<li>delete_confirm</li>
+</ul>
+</li>
+<li>语法<ul>
+<li>tags<ul>
+<li>常用语法<ul>
+<li>{% extends 'xxx.html' %} <strong>必须在 html 的最开头</strong></li>
+<li>{% load xxx %} <strong>每个模板页都要 load 自己使用的 tag， 而不能通过 extend 继承</strong></li>
+<li>{% include xxx %}</li>
+<li>{% block xxx %} {% endblock xxx %}</li>
+<li>{% url 'namespace:name' %}</li>
+</ul>
+</li>
+<li>自定义 tag<ul>
+<li>在 app 内创建 templatetags/demo.py</li>
+<li>{% include demo %}</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>variables<ul>
+<li>{{ var1 }}</li>
+</ul>
+</li>
+<li>filters</li>
+<li>comments</li>
+</ul>
+</li>
+<li>overwrite<ul>
+<li>模板加载顺序 DIRS -&gt; APP_DIRS -&gt; others</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>form</p>
+<ul>
+<li>Form: 灵活设置需要的字段</li>
+<li>ModelForm：针对模型，添加了数据的验证和保存的功能</li>
+</ul>
+</li>
+</ul>
+<h2 id="_9">具体功能<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="jwt">认证 jwt<a class="headerlink" href="#jwt" title="Permanent link">&para;</a></h3>
+<p>jwt存储方式:</p>
+<ul>
+<li>cookie</li>
+<li>优点<ul>
+<li>可设置 HttpOnly 属性： 可以设置 HttpOnly 属性，防止客户端 JavaScript 访问 Cookie，提高安全性，防止 XSS 攻击。</li>
+<li>可设置 Secure 属性： 可以设置 Secure 属性，只允许在 HTTPS 连接中发送 Cookie，防止中间人攻击。</li>
+<li>可设置 SameSite 属性： 可以设置 SameSite 属性，防止 CSRF 攻击</li>
+<li>自动发送</li>
+</ul>
+</li>
+<li>缺点<ul>
+<li>不能跨域, 需要 cors</li>
+<li>大小有限制, 通常为4KB</li>
+</ul>
+</li>
+</ul>
+<p>jwt基础流程:</p>
+<p>登录 -&gt; 前端存储 -&gt; 请求 -&gt; 后端验证 -&gt; 返回</p>
+<p>JWT 续期:</p>
+<ol>
+<li>前端检测到 JWT 过期，使用刷新 token 请求新 JWT。</li>
+<li>后端验证刷新 token，生成并返回新 JWT。</li>
+<li>如果token也过期，则需要用户重新登录</li>
+<li>设置 HttpOnly, Secure, SameSite 属性</li>
+</ol>
+<p>认证类型:
+- Bearer: 通过 Authorization 请求头传递 JWT 令牌
+- Basic Authentication: 使用 Base64 编码的用户名和密码
+- Digest Authentication: 基于哈希签名的认证
+- OAuth 2.0 Authorization Bearer Token: 用于 OAuth 2.0 框架中的访问令牌
+- Hawk Authentication: 基于签名的认证，用于高安全性场景</p>
+<h3 id="_10">用户和邮箱<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>新项目的用户模型</p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># app/models.py</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><a href="#__codelineno-9-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">AbstractUser</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><a href="#__codelineno-9-3"><span class="linenos" data-linenos=" 3 "></span></a>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><a href="#__codelineno-9-4"><span class="linenos" data-linenos=" 4 "></span></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5"></a><a href="#__codelineno-9-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">User</span><span class="p">(</span><span class="n">AbstractUser</span><span class="p">):</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6"></a><a href="#__codelineno-9-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="k">pass</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7"></a><a href="#__codelineno-9-7"><span class="linenos" data-linenos=" 7 "></span></a>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8"></a><a href="#__codelineno-9-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="c1"># project/settings.py</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9"></a><a href="#__codelineno-9-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="n">settings</span><span class="o">.</span><span class="n">AUTH_USER_MODEL</span> <span class="o">=</span> <span class="s1">&#39;appname.User&#39;</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10"></a><a href="#__codelineno-9-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11"></a><a href="#__codelineno-9-11"><span class="linenos" data-linenos="11 "></span></a><span class="c1"># app.admin.py</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12"></a><a href="#__codelineno-9-12"><span class="linenos" data-linenos="12 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.admin</span><span class="w"> </span><span class="kn">import</span> <span class="n">UserAdmin</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13"></a><a href="#__codelineno-9-13"><span class="linenos" data-linenos="13 "></span></a>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14"></a><a href="#__codelineno-9-14"><span class="linenos" data-linenos="14 "></span></a>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15"></a><a href="#__codelineno-9-15"><span class="linenos" data-linenos="15 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">CustomUserAdmin</span><span class="p">(</span><span class="n">UserAdmin</span><span class="p">):</span>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16"></a><a href="#__codelineno-9-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="o">...</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17"></a><a href="#__codelineno-9-17"><span class="linenos" data-linenos="17 "></span></a>    <span class="n">fieldsets</span> <span class="o">=</span> <span class="n">UserAdmin</span><span class="o">.</span><span class="n">fieldsets</span> <span class="o">+</span> <span class="p">((</span><span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;custom_field&quot;</span><span class="p">]}),)</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18"></a><a href="#__codelineno-9-18"><span class="linenos" data-linenos="18 "></span></a>    <span class="n">add_fieldsets</span> <span class="o">=</span> <span class="n">UserAdmin</span><span class="o">.</span><span class="n">add_fieldsets</span> <span class="o">+</span> <span class="p">((</span><span class="kc">None</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;fields&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;custom_field&quot;</span><span class="p">]}),)</span>
+</span></code></pre></div>
+<p>老项目的用户模型</p>
+<p>使用OneToOneField, <strong>可以多个 OneToOneField</strong>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><a href="#__codelineno-10-1"><span class="linenos" data-linenos="1 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.contrib.auth.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">User</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><a href="#__codelineno-10-2"><span class="linenos" data-linenos="2 "></span></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><a href="#__codelineno-10-3"><span class="linenos" data-linenos="3 "></span></a>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><a href="#__codelineno-10-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Employee</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5"></a><a href="#__codelineno-10-5"><span class="linenos" data-linenos="5 "></span></a>    <span class="n">user</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">OneToOneField</span><span class="p">(</span><span class="n">User</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">)</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6"></a><a href="#__codelineno-10-6"><span class="linenos" data-linenos="6 "></span></a>    <span class="n">department</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</span></code></pre></div></p>
+<h3 id="_11">权限<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ul>
+<li>RBAC： 基于角色控制访问</li>
+<li>权限分类<ul>
+<li>retrieve list</li>
+<li>retrieve detail</li>
+<li>create</li>
+<li>update detail</li>
+<li>delete detail</li>
+</ul>
+</li>
+</ul>
+<h3 id="_12">异步任务和定时任务<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>Celery 是一个分布式任务队列系统，广泛用于处理异步任务和定时任务。</p>
+<p><a href="https://docs.celeryq.dev/en/stable/index.html">https://docs.celeryq.dev/en/stable/index.html</a></p>
+<table>
+<thead>
+<tr>
+<th>组件</th>
+<th>功能描述</th>
+<th>示意图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>worker</strong></td>
+<td>执行任务</td>
+<td>负责从消息队列中获取任务并执行。</td>
+</tr>
+<tr>
+<td><strong>beat</strong></td>
+<td>任务调度器</td>
+<td>定期检查任务并将其添加到消息队列中。</td>
+</tr>
+<tr>
+<td><strong>broker</strong></td>
+<td>消息中间件</td>
+<td>存储待执行的任务，是 worker 和 beat 之间的桥梁。常见的有 RabbitMQ、Redis、Amazon SQS 等。</td>
+</tr>
+<tr>
+<td><strong>backend</strong></td>
+<td>结果存储</td>
+<td>存储任务执行的结果。常见的有 SQLAlchemy、Redis、MongoDB 等。</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>graph TD
+    A[Celery Beat] --&gt;|调度任务| B(消息队列)
+    B --&gt;|发送任务| C[Celery Worker 1]
+    B --&gt;|发送任务| D[Celery Worker 2]
+    B --&gt;|发送任务| E[Celery Worker N]
+    F[客户端应用] --&gt;|发送任务| B
+    C --&gt;|存储结果| G[Backend]
+    D --&gt;|存储结果| G
+    E --&gt;|存储结果| G
+</code></pre>
+<p>常用命令
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><a href="#__codelineno-11-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1"># 启动worker, 异步处理 耗时任务</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><a href="#__codelineno-11-2"><span class="linenos" data-linenos="2 "></span></a>celery<span class="w"> </span>-A<span class="w"> </span>djangoProject<span class="w"> </span>worker<span class="w"> </span>-l<span class="w"> </span>INFO<span class="w"> </span>-P<span class="w"> </span>eventlet
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><a href="#__codelineno-11-3"><span class="linenos" data-linenos="3 "></span></a><span class="c1"># 启动beat, 调用定时任务</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><a href="#__codelineno-11-4"><span class="linenos" data-linenos="4 "></span></a>celery<span class="w"> </span>-A<span class="w"> </span>djangoProject<span class="w"> </span>beat<span class="w"> </span>-l<span class="w"> </span>INFO
+</span></code></pre></div></p>
+<h4 id="_13">定时任务<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<p><div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><a href="#__codelineno-12-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1"># 5点执行</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><a href="#__codelineno-12-2"><span class="linenos" data-linenos="2 "></span></a><span class="nd">@periodic_task</span><span class="p">(</span><span class="n">run_every</span><span class="o">=</span><span class="n">crontab</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="s2">&quot;5&quot;</span><span class="p">))</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3"></a><a href="#__codelineno-12-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">def</span><span class="w"> </span><span class="nf">func1</span><span class="p">():</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4"></a><a href="#__codelineno-12-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="o">...</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5"></a><a href="#__codelineno-12-5"><span class="linenos" data-linenos="5 "></span></a>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6"></a><a href="#__codelineno-12-6"><span class="linenos" data-linenos="6 "></span></a><span class="c1"># 每5小时执行</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7"></a><a href="#__codelineno-12-7"><span class="linenos" data-linenos="7 "></span></a><span class="nd">@periodic_task</span><span class="p">(</span><span class="n">run_every</span><span class="o">=</span><span class="n">crontab</span><span class="p">(</span><span class="n">hour</span><span class="o">=</span><span class="s2">&quot;*/5&quot;</span><span class="p">))</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8"></a><a href="#__codelineno-12-8"><span class="linenos" data-linenos="8 "></span></a><span class="k">def</span><span class="w"> </span><span class="nf">func1</span><span class="p">():</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9"></a><a href="#__codelineno-12-9"><span class="linenos" data-linenos="9 "></span></a>    <span class="o">...</span> 
+</span></code></pre></div>
+常见api:</p>
+<ul>
+<li>查所有</li>
+<li>增</li>
+<li>查 状态,结果</li>
+<li>删</li>
+</ul>
+<p>前端获取结果的方式:</p>
+<ul>
+<li>前端轮循</li>
+<li>websocket</li>
+</ul>
+<h3 id="_14">缓存<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<h3 id="_15">查询优化<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><a href="https://docs.djangoproject.com/en/5.1/ref/models/querysets/#select-related">https://docs.djangoproject.com/en/5.1/ref/models/querysets/#select-related</a></p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><a href="#__codelineno-13-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># select_related(): foreign key and one-to-one</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><a href="#__codelineno-13-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="n">books</span> <span class="o">=</span> <span class="n">Book</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">select_related</span><span class="p">(</span><span class="s1">&#39;author&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><a href="#__codelineno-13-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">for</span> <span class="n">book</span> <span class="ow">in</span> <span class="n">books</span><span class="p">:</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4"></a><a href="#__codelineno-13-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="nb">print</span><span class="p">(</span><span class="n">book</span><span class="o">.</span><span class="n">author</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>  <span class="c1"># 这里不会触发额外的查询，因为作者信息已经被预取</span>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5"></a><a href="#__codelineno-13-5"><span class="linenos" data-linenos=" 5 "></span></a>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6"></a><a href="#__codelineno-13-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="c1"># prefetch_related(): 支持多对多和反向关系</span>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7"></a><a href="#__codelineno-13-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="n">articles</span> <span class="o">=</span> <span class="n">Article</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8"></a><a href="#__codelineno-13-8"><span class="linenos" data-linenos=" 8 "></span></a>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9"></a><a href="#__codelineno-13-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="k">for</span> <span class="n">article</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10"></a><a href="#__codelineno-13-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="nb">print</span><span class="p">(</span><span class="n">article</span><span class="o">.</span><span class="n">title</span><span class="p">,</span> <span class="p">[</span><span class="n">tag</span><span class="o">.</span><span class="n">name</span> <span class="k">for</span> <span class="n">tag</span> <span class="ow">in</span> <span class="n">article</span><span class="o">.</span><span class="n">tags</span><span class="o">.</span><span class="n">all</span><span class="p">()])</span>  <span class="c1"># 不会触发额外查询</span>
+</span></code></pre></div>
+<h2 id="_16">前后端分离<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<p>TODO:</p>
+<h3 id="api">api<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<p>前后端 通过api来进行交互</p>
+<p>优秀api的规范</p>
+<ul>
+<li>restful</li>
+<li>大多数现代 RESTful API 都使用<code>-</code>作为分隔符</li>
+<li>文档</li>
+<li>验证</li>
+</ul>
+<h4 id="drf">DRF<a class="headerlink" href="#drf" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://q1mi.github.io/Django-REST-framework-documentation/">https://q1mi.github.io/Django-REST-framework-documentation/</a></li>
+<li><a href="https://q1mi.github.io/Django-REST-framework-documentation/api-guide/serializers_zh/">https://q1mi.github.io/Django-REST-framework-documentation/api-guide/serializers_zh/</a></li>
+</ul>
+<p>概念: 对 django 框架进一步封装的第三方包，以便于写出 restfulAPI</p>
+<h5 id="serializer">Serializer<a class="headerlink" href="#serializer" title="Permanent link">&para;</a></h5>
+<p>REST framework中的serializers与Django的Form和ModelForm类非常像。</p>
+<p>作用: 简化view函数的实现, 数据库的数据转json. json转数据, 加数据验证</p>
+<table>
+<thead>
+<tr>
+<th>Django</th>
+<th>DRF</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Form</td>
+<td>Serializer</td>
+<td>灵活,定制化</td>
+</tr>
+<tr>
+<td>ModelForm</td>
+<td>ModelSerializer</td>
+<td>固定, 方便</td>
+</tr>
+</tbody>
+</table>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><a href="#__codelineno-14-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># 定义</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><a href="#__codelineno-14-2"><span class="linenos" data-linenos=" 2 "></span></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3"></a><a href="#__codelineno-14-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework</span><span class="w"> </span><span class="kn">import</span> <span class="n">serializers</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4"></a><a href="#__codelineno-14-4"><span class="linenos" data-linenos=" 4 "></span></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5"></a><a href="#__codelineno-14-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">CommentSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">Serializer</span><span class="p">):</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6"></a><a href="#__codelineno-14-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">email</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">EmailField</span><span class="p">()</span>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7"></a><a href="#__codelineno-14-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8"></a><a href="#__codelineno-14-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">created</span> <span class="o">=</span> <span class="n">serializers</span><span class="o">.</span><span class="n">DateTimeField</span><span class="p">()</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9"></a><a href="#__codelineno-14-9"><span class="linenos" data-linenos=" 9 "></span></a>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10"></a><a href="#__codelineno-14-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">create</span><span class="p">():</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11"></a><a href="#__codelineno-14-11"><span class="linenos" data-linenos="11 "></span></a>        <span class="o">...</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12"></a><a href="#__codelineno-14-12"><span class="linenos" data-linenos="12 "></span></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13"></a><a href="#__codelineno-14-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">update</span><span class="p">():</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14"></a><a href="#__codelineno-14-14"><span class="linenos" data-linenos="14 "></span></a>        <span class="o">...</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15"></a><a href="#__codelineno-14-15"><span class="linenos" data-linenos="15 "></span></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16"></a><a href="#__codelineno-14-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">save</span><span class="p">():</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17"></a><a href="#__codelineno-14-17"><span class="linenos" data-linenos="17 "></span></a>        <span class="o">...</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18"></a><a href="#__codelineno-14-18"><span class="linenos" data-linenos="18 "></span></a>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19"></a><a href="#__codelineno-14-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">validate</span><span class="p">():</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20"></a><a href="#__codelineno-14-20"><span class="linenos" data-linenos="20 "></span></a>        <span class="c1"># 重写 对象 验证逻辑</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21"></a><a href="#__codelineno-14-21"><span class="linenos" data-linenos="21 "></span></a>        <span class="o">...</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22"></a><a href="#__codelineno-14-22"><span class="linenos" data-linenos="22 "></span></a>
+</span><span id="__span-14-23"><a id="__codelineno-14-23" name="__codelineno-14-23"></a><a href="#__codelineno-14-23"><span class="linenos" data-linenos="23 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">validate_xxxx</span><span class="p">():</span>
+</span><span id="__span-14-24"><a id="__codelineno-14-24" name="__codelineno-14-24"></a><a href="#__codelineno-14-24"><span class="linenos" data-linenos="24 "></span></a>        <span class="c1"># 重写 field 验证逻辑</span>
+</span><span id="__span-14-25"><a id="__codelineno-14-25" name="__codelineno-14-25"></a><a href="#__codelineno-14-25"><span class="linenos" data-linenos="25 "></span></a>        <span class="o">...</span>
+</span><span id="__span-14-26"><a id="__codelineno-14-26" name="__codelineno-14-26"></a><a href="#__codelineno-14-26"><span class="linenos" data-linenos="26 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">to_representation</span><span class="p">():</span>
+</span><span id="__span-14-27"><a id="__codelineno-14-27" name="__codelineno-14-27"></a><a href="#__codelineno-14-27"><span class="linenos" data-linenos="27 "></span></a>        <span class="c1"># 重写序列化逻辑</span>
+</span><span id="__span-14-28"><a id="__codelineno-14-28" name="__codelineno-14-28"></a><a href="#__codelineno-14-28"><span class="linenos" data-linenos="28 "></span></a>        <span class="o">...</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><a href="#__codelineno-15-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># 嵌套 nest</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><a href="#__codelineno-15-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.db</span><span class="w"> </span><span class="kn">import</span> <span class="n">models</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><a href="#__codelineno-15-3"><span class="linenos" data-linenos=" 3 "></span></a>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a><a href="#__codelineno-15-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Website</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a><a href="#__codelineno-15-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">name</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;网站名称&#39;</span><span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a><a href="#__codelineno-15-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">url</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">URLField</span><span class="p">(</span><span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;网站URL&#39;</span><span class="p">)</span>
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7"></a><a href="#__codelineno-15-7"><span class="linenos" data-linenos=" 7 "></span></a>
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8"></a><a href="#__codelineno-15-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9"></a><a href="#__codelineno-15-9"><span class="linenos" data-linenos=" 9 "></span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span>
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10"></a><a href="#__codelineno-15-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11"></a><a href="#__codelineno-15-11"><span class="linenos" data-linenos="11 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Audio</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12"></a><a href="#__codelineno-15-12"><span class="linenos" data-linenos="12 "></span></a>    <span class="n">website</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">ForeignKey</span><span class="p">(</span><span class="n">Website</span><span class="p">,</span> <span class="n">on_delete</span><span class="o">=</span><span class="n">models</span><span class="o">.</span><span class="n">CASCADE</span><span class="p">,</span> <span class="n">related_name</span><span class="o">=</span><span class="s1">&#39;audios&#39;</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;所属网站&#39;</span><span class="p">)</span>
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13"></a><a href="#__codelineno-15-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;音频标题&#39;</span><span class="p">)</span>
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14"></a><a href="#__codelineno-15-14"><span class="linenos" data-linenos="14 "></span></a>    <span class="n">file_path</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">FileField</span><span class="p">(</span><span class="n">upload_to</span><span class="o">=</span><span class="s1">&#39;audio_files/&#39;</span><span class="p">,</span> <span class="n">verbose_name</span><span class="o">=</span><span class="s1">&#39;音频文件路径&#39;</span><span class="p">)</span>
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15"></a><a href="#__codelineno-15-15"><span class="linenos" data-linenos="15 "></span></a>
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16"></a><a href="#__codelineno-15-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17"></a><a href="#__codelineno-15-17"><span class="linenos" data-linenos="17 "></span></a>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18"></a><a href="#__codelineno-15-18"><span class="linenos" data-linenos="18 "></span></a>
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19"></a><a href="#__codelineno-15-19"><span class="linenos" data-linenos="19 "></span></a>
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20"></a><a href="#__codelineno-15-20"><span class="linenos" data-linenos="20 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework</span><span class="w"> </span><span class="kn">import</span> <span class="n">serializers</span>
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21"></a><a href="#__codelineno-15-21"><span class="linenos" data-linenos="21 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Website</span><span class="p">,</span> <span class="n">Audio</span>
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22"></a><a href="#__codelineno-15-22"><span class="linenos" data-linenos="22 "></span></a>
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23"></a><a href="#__codelineno-15-23"><span class="linenos" data-linenos="23 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">AudioSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24"></a><a href="#__codelineno-15-24"><span class="linenos" data-linenos="24 "></span></a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-15-25"><a id="__codelineno-15-25" name="__codelineno-15-25"></a><a href="#__codelineno-15-25"><span class="linenos" data-linenos="25 "></span></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Audio</span>
+</span><span id="__span-15-26"><a id="__codelineno-15-26" name="__codelineno-15-26"></a><a href="#__codelineno-15-26"><span class="linenos" data-linenos="26 "></span></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;file_path&#39;</span><span class="p">]</span>
+</span><span id="__span-15-27"><a id="__codelineno-15-27" name="__codelineno-15-27"></a><a href="#__codelineno-15-27"><span class="linenos" data-linenos="27 "></span></a>
+</span><span id="__span-15-28"><a id="__codelineno-15-28" name="__codelineno-15-28"></a><a href="#__codelineno-15-28"><span class="linenos" data-linenos="28 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">WebsiteSerializer</span><span class="p">(</span><span class="n">serializers</span><span class="o">.</span><span class="n">ModelSerializer</span><span class="p">):</span>
+</span><span id="__span-15-29"><a id="__codelineno-15-29" name="__codelineno-15-29"></a><a href="#__codelineno-15-29"><span class="linenos" data-linenos="29 "></span></a>    <span class="n">audios</span> <span class="o">=</span> <span class="n">AudioSerializer</span><span class="p">(</span><span class="n">many</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">read_only</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># 附带</span>
+</span><span id="__span-15-30"><a id="__codelineno-15-30" name="__codelineno-15-30"></a><a href="#__codelineno-15-30"><span class="linenos" data-linenos="30 "></span></a>
+</span><span id="__span-15-31"><a id="__codelineno-15-31" name="__codelineno-15-31"></a><a href="#__codelineno-15-31"><span class="linenos" data-linenos="31 "></span></a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-15-32"><a id="__codelineno-15-32" name="__codelineno-15-32"></a><a href="#__codelineno-15-32"><span class="linenos" data-linenos="32 "></span></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Website</span>
+</span><span id="__span-15-33"><a id="__codelineno-15-33" name="__codelineno-15-33"></a><a href="#__codelineno-15-33"><span class="linenos" data-linenos="33 "></span></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;url&#39;</span><span class="p">,</span> <span class="s1">&#39;audios&#39;</span><span class="p">]</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><a href="#__codelineno-16-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1"># 使用</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><a href="#__codelineno-16-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="nd">@csrf_exempt</span>
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3"></a><a href="#__codelineno-16-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">def</span><span class="w"> </span><span class="nf">snippet_detail</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">pk</span><span class="p">):</span>
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4"></a><a href="#__codelineno-16-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5"></a><a href="#__codelineno-16-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="sd">    获取，更新或删除一个 code snippet。</span>
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6"></a><a href="#__codelineno-16-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7"></a><a href="#__codelineno-16-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8"></a><a href="#__codelineno-16-8"><span class="linenos" data-linenos=" 8 "></span></a>        <span class="n">snippet</span> <span class="o">=</span> <span class="n">Snippet</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">pk</span><span class="p">)</span>
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9"></a><a href="#__codelineno-16-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="k">except</span> <span class="n">Snippet</span><span class="o">.</span><span class="n">DoesNotExist</span><span class="p">:</span>
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10"></a><a href="#__codelineno-16-10"><span class="linenos" data-linenos="10 "></span></a>        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="mi">404</span><span class="p">)</span>
+</span><span id="__span-16-11"><a id="__codelineno-16-11" name="__codelineno-16-11"></a><a href="#__codelineno-16-11"><span class="linenos" data-linenos="11 "></span></a>
+</span><span id="__span-16-12"><a id="__codelineno-16-12" name="__codelineno-16-12"></a><a href="#__codelineno-16-12"><span class="linenos" data-linenos="12 "></span></a>    <span class="k">if</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;GET&#39;</span><span class="p">:</span>
+</span><span id="__span-16-13"><a id="__codelineno-16-13" name="__codelineno-16-13"></a><a href="#__codelineno-16-13"><span class="linenos" data-linenos="13 "></span></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">SnippetSerializer</span><span class="p">(</span><span class="n">snippet</span><span class="p">)</span>
+</span><span id="__span-16-14"><a id="__codelineno-16-14" name="__codelineno-16-14"></a><a href="#__codelineno-16-14"><span class="linenos" data-linenos="14 "></span></a>        <span class="k">return</span> <span class="n">JSONResponse</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-16-15"><a id="__codelineno-16-15" name="__codelineno-16-15"></a><a href="#__codelineno-16-15"><span class="linenos" data-linenos="15 "></span></a>
+</span><span id="__span-16-16"><a id="__codelineno-16-16" name="__codelineno-16-16"></a><a href="#__codelineno-16-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;PUT&#39;</span><span class="p">:</span>
+</span><span id="__span-16-17"><a id="__codelineno-16-17" name="__codelineno-16-17"></a><a href="#__codelineno-16-17"><span class="linenos" data-linenos="17 "></span></a>        <span class="n">data</span> <span class="o">=</span> <span class="n">JSONParser</span><span class="p">()</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span id="__span-16-18"><a id="__codelineno-16-18" name="__codelineno-16-18"></a><a href="#__codelineno-16-18"><span class="linenos" data-linenos="18 "></span></a>        <span class="n">serializer</span> <span class="o">=</span> <span class="n">SnippetSerializer</span><span class="p">(</span><span class="n">snippet</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-16-19"><a id="__codelineno-16-19" name="__codelineno-16-19"></a><a href="#__codelineno-16-19"><span class="linenos" data-linenos="19 "></span></a>        <span class="k">if</span> <span class="n">serializer</span><span class="o">.</span><span class="n">is_valid</span><span class="p">():</span>
+</span><span id="__span-16-20"><a id="__codelineno-16-20" name="__codelineno-16-20"></a><a href="#__codelineno-16-20"><span class="linenos" data-linenos="20 "></span></a>            <span class="n">serializer</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</span><span id="__span-16-21"><a id="__codelineno-16-21" name="__codelineno-16-21"></a><a href="#__codelineno-16-21"><span class="linenos" data-linenos="21 "></span></a>            <span class="k">return</span> <span class="n">JSONResponse</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+</span><span id="__span-16-22"><a id="__codelineno-16-22" name="__codelineno-16-22"></a><a href="#__codelineno-16-22"><span class="linenos" data-linenos="22 "></span></a>        <span class="k">return</span> <span class="n">JSONResponse</span><span class="p">(</span><span class="n">serializer</span><span class="o">.</span><span class="n">errors</span><span class="p">,</span> <span class="n">status</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</span><span id="__span-16-23"><a id="__codelineno-16-23" name="__codelineno-16-23"></a><a href="#__codelineno-16-23"><span class="linenos" data-linenos="23 "></span></a>
+</span><span id="__span-16-24"><a id="__codelineno-16-24" name="__codelineno-16-24"></a><a href="#__codelineno-16-24"><span class="linenos" data-linenos="24 "></span></a>    <span class="k">elif</span> <span class="n">request</span><span class="o">.</span><span class="n">method</span> <span class="o">==</span> <span class="s1">&#39;DELETE&#39;</span><span class="p">:</span>
+</span><span id="__span-16-25"><a id="__codelineno-16-25" name="__codelineno-16-25"></a><a href="#__codelineno-16-25"><span class="linenos" data-linenos="25 "></span></a>        <span class="n">snippet</span><span class="o">.</span><span class="n">delete</span><span class="p">()</span>
+</span><span id="__span-16-26"><a id="__codelineno-16-26" name="__codelineno-16-26"></a><a href="#__codelineno-16-26"><span class="linenos" data-linenos="26 "></span></a>        <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="mi">204</span><span class="p">)</span>
+</span></code></pre></div>
+<h5 id="viewset">Viewset<a class="headerlink" href="#viewset" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>类</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View</td>
+<td></td>
+</tr>
+<tr>
+<td><code>APIView</code></td>
+<td>View+ authentication_classes, throttle_classes, permission_classes</td>
+</tr>
+<tr>
+<td>GenericAPIView</td>
+<td><code>APIView</code>+ pagination_class, filter_backends, serializer_class</td>
+</tr>
+<tr>
+<td>ViewSet</td>
+<td><code>APIView</code>+ DefaultRouter</td>
+</tr>
+<tr>
+<td><code>GenericViewSet</code></td>
+<td>GenericAPIView+ DefaultRouter</td>
+</tr>
+<tr>
+<td>ModelViewSet</td>
+<td><code>GenericViewSet</code>+ mixin</td>
+</tr>
+</tbody>
+</table>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><a href="#__codelineno-17-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">CreateListRetrieveViewSet</span><span class="p">(</span><span class="n">mixins</span><span class="o">.</span><span class="n">CreateModelMixin</span><span class="p">,</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><a href="#__codelineno-17-2"><span class="linenos" data-linenos=" 2 "></span></a>                                <span class="n">mixins</span><span class="o">.</span><span class="n">ListModelMixin</span><span class="p">,</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><a href="#__codelineno-17-3"><span class="linenos" data-linenos=" 3 "></span></a>                                <span class="n">mixins</span><span class="o">.</span><span class="n">RetrieveModelMixin</span><span class="p">,</span>
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4"></a><a href="#__codelineno-17-4"><span class="linenos" data-linenos=" 4 "></span></a>                                <span class="n">viewsets</span><span class="o">.</span><span class="n">GenericViewSet</span><span class="p">):</span>
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5"></a><a href="#__codelineno-17-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6"></a><a href="#__codelineno-17-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="sd">    A viewset that provides `retrieve`, `create`, and `list` actions.</span>
+</span><span id="__span-17-7"><a id="__codelineno-17-7" name="__codelineno-17-7"></a><a href="#__codelineno-17-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-17-8"><a id="__codelineno-17-8" name="__codelineno-17-8"></a><a href="#__codelineno-17-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Account</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-17-9"><a id="__codelineno-17-9" name="__codelineno-17-9"></a><a href="#__codelineno-17-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">AccountSerializer</span>
+</span><span id="__span-17-10"><a id="__codelineno-17-10" name="__codelineno-17-10"></a><a href="#__codelineno-17-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-17-11"><a id="__codelineno-17-11" name="__codelineno-17-11"></a><a href="#__codelineno-17-11"><span class="linenos" data-linenos="11 "></span></a>
+</span><span id="__span-17-12"><a id="__codelineno-17-12" name="__codelineno-17-12"></a><a href="#__codelineno-17-12"><span class="linenos" data-linenos="12 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">AccountViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ReadOnlyModelViewSet</span><span class="p">):</span>
+</span><span id="__span-17-13"><a id="__codelineno-17-13" name="__codelineno-17-13"></a><a href="#__codelineno-17-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-17-14"><a id="__codelineno-17-14" name="__codelineno-17-14"></a><a href="#__codelineno-17-14"><span class="linenos" data-linenos="14 "></span></a><span class="sd">    A simple ViewSet for viewing accounts.</span>
+</span><span id="__span-17-15"><a id="__codelineno-17-15" name="__codelineno-17-15"></a><a href="#__codelineno-17-15"><span class="linenos" data-linenos="15 "></span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-17-16"><a id="__codelineno-17-16" name="__codelineno-17-16"></a><a href="#__codelineno-17-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Account</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-17-17"><a id="__codelineno-17-17" name="__codelineno-17-17"></a><a href="#__codelineno-17-17"><span class="linenos" data-linenos="17 "></span></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">AccountSerializer</span>
+</span></code></pre></div>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><a href="#__codelineno-18-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework.decorators</span><span class="w"> </span><span class="kn">import</span> <span class="n">action</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><a href="#__codelineno-18-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">rest_framework.filters</span><span class="w"> </span><span class="kn">import</span> <span class="n">SearchFilter</span><span class="p">,</span> <span class="n">OrderingFilter</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><a href="#__codelineno-18-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="c1"># django_filters</span>
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4"></a><a href="#__codelineno-18-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django_filters.rest_framework</span><span class="w"> </span><span class="kn">import</span> <span class="n">DjangoFilterBackend</span><span class="p">,</span> <span class="n">FilterSet</span>
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5"></a><a href="#__codelineno-18-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="c1"># drf-dynamic-fields</span>
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6"></a><a href="#__codelineno-18-6"><span class="linenos" data-linenos=" 6 "></span></a>
+</span><span id="__span-18-7"><a id="__codelineno-18-7" name="__codelineno-18-7"></a><a href="#__codelineno-18-7"><span class="linenos" data-linenos=" 7 "></span></a>
+</span><span id="__span-18-8"><a id="__codelineno-18-8" name="__codelineno-18-8"></a><a href="#__codelineno-18-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">UserFilter</span><span class="p">(</span><span class="n">FilterSet</span><span class="p">):</span>
+</span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9"></a><a href="#__codelineno-18-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="n">username</span> <span class="o">=</span> <span class="n">filters</span><span class="o">.</span><span class="n">CharFilter</span><span class="p">(</span><span class="n">field_name</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="n">lookup_expr</span><span class="o">=</span><span class="s1">&#39;icontains&#39;</span><span class="p">)</span>  <span class="c1"># 模糊匹配用户名</span>
+</span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10"></a><a href="#__codelineno-18-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-18-11"><a id="__codelineno-18-11" name="__codelineno-18-11"></a><a href="#__codelineno-18-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="k">class</span><span class="w"> </span><span class="nc">Meta</span><span class="p">:</span>
+</span><span id="__span-18-12"><a id="__codelineno-18-12" name="__codelineno-18-12"></a><a href="#__codelineno-18-12"><span class="linenos" data-linenos="12 "></span></a>        <span class="n">model</span> <span class="o">=</span> <span class="n">Account</span>
+</span><span id="__span-18-13"><a id="__codelineno-18-13" name="__codelineno-18-13"></a><a href="#__codelineno-18-13"><span class="linenos" data-linenos="13 "></span></a>        <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">]</span>
+</span><span id="__span-18-14"><a id="__codelineno-18-14" name="__codelineno-18-14"></a><a href="#__codelineno-18-14"><span class="linenos" data-linenos="14 "></span></a>
+</span><span id="__span-18-15"><a id="__codelineno-18-15" name="__codelineno-18-15"></a><a href="#__codelineno-18-15"><span class="linenos" data-linenos="15 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">AccountViewSet</span><span class="p">(</span><span class="n">viewsets</span><span class="o">.</span><span class="n">ModelViewSet</span><span class="p">):</span>
+</span><span id="__span-18-16"><a id="__codelineno-18-16" name="__codelineno-18-16"></a><a href="#__codelineno-18-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+</span><span id="__span-18-17"><a id="__codelineno-18-17" name="__codelineno-18-17"></a><a href="#__codelineno-18-17"><span class="linenos" data-linenos="17 "></span></a>
+</span><span id="__span-18-18"><a id="__codelineno-18-18" name="__codelineno-18-18"></a><a href="#__codelineno-18-18"><span class="linenos" data-linenos="18 "></span></a><span class="sd">    &quot;&quot;&quot;</span>
+</span><span id="__span-18-19"><a id="__codelineno-18-19" name="__codelineno-18-19"></a><a href="#__codelineno-18-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="n">queryset</span> <span class="o">=</span> <span class="n">Account</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
+</span><span id="__span-18-20"><a id="__codelineno-18-20" name="__codelineno-18-20"></a><a href="#__codelineno-18-20"><span class="linenos" data-linenos="20 "></span></a>    <span class="n">serializer_class</span> <span class="o">=</span> <span class="n">AccountSerializer</span>
+</span><span id="__span-18-21"><a id="__codelineno-18-21" name="__codelineno-18-21"></a><a href="#__codelineno-18-21"><span class="linenos" data-linenos="21 "></span></a>
+</span><span id="__span-18-22"><a id="__codelineno-18-22" name="__codelineno-18-22"></a><a href="#__codelineno-18-22"><span class="linenos" data-linenos="22 "></span></a>    <span class="c1"># 自定义各种配置</span>
+</span><span id="__span-18-23"><a id="__codelineno-18-23" name="__codelineno-18-23"></a><a href="#__codelineno-18-23"><span class="linenos" data-linenos="23 "></span></a>
+</span><span id="__span-18-24"><a id="__codelineno-18-24" name="__codelineno-18-24"></a><a href="#__codelineno-18-24"><span class="linenos" data-linenos="24 "></span></a>    <span class="c1"># 权限</span>
+</span><span id="__span-18-25"><a id="__codelineno-18-25" name="__codelineno-18-25"></a><a href="#__codelineno-18-25"><span class="linenos" data-linenos="25 "></span></a>    <span class="n">authentication_classes</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># 1</span>
+</span><span id="__span-18-26"><a id="__codelineno-18-26" name="__codelineno-18-26"></a><a href="#__codelineno-18-26"><span class="linenos" data-linenos="26 "></span></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># 2</span>
+</span><span id="__span-18-27"><a id="__codelineno-18-27" name="__codelineno-18-27"></a><a href="#__codelineno-18-27"><span class="linenos" data-linenos="27 "></span></a>    <span class="n">throttle_classes</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># 3</span>
+</span><span id="__span-18-28"><a id="__codelineno-18-28" name="__codelineno-18-28"></a><a href="#__codelineno-18-28"><span class="linenos" data-linenos="28 "></span></a>
+</span><span id="__span-18-29"><a id="__codelineno-18-29" name="__codelineno-18-29"></a><a href="#__codelineno-18-29"><span class="linenos" data-linenos="29 "></span></a>    <span class="c1"># 功能</span>
+</span><span id="__span-18-30"><a id="__codelineno-18-30" name="__codelineno-18-30"></a><a href="#__codelineno-18-30"><span class="linenos" data-linenos="30 "></span></a>    <span class="n">filter_backends</span> <span class="o">=</span> <span class="p">[</span><span class="n">SearchFilter</span><span class="p">,</span> <span class="n">OrderingFilter</span><span class="p">,</span> <span class="n">DjangoFilterBackend</span><span class="p">]</span>
+</span><span id="__span-18-31"><a id="__codelineno-18-31" name="__codelineno-18-31"></a><a href="#__codelineno-18-31"><span class="linenos" data-linenos="31 "></span></a>
+</span><span id="__span-18-32"><a id="__codelineno-18-32" name="__codelineno-18-32"></a><a href="#__codelineno-18-32"><span class="linenos" data-linenos="32 "></span></a>    <span class="c1"># GET /mymodels/?search=example</span>
+</span><span id="__span-18-33"><a id="__codelineno-18-33" name="__codelineno-18-33"></a><a href="#__codelineno-18-33"><span class="linenos" data-linenos="33 "></span></a>    <span class="n">search_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;description&#39;</span><span class="p">]</span>  <span class="c1"># 指定搜索字段</span>
+</span><span id="__span-18-34"><a id="__codelineno-18-34" name="__codelineno-18-34"></a><a href="#__codelineno-18-34"><span class="linenos" data-linenos="34 "></span></a>
+</span><span id="__span-18-35"><a id="__codelineno-18-35" name="__codelineno-18-35"></a><a href="#__codelineno-18-35"><span class="linenos" data-linenos="35 "></span></a>    <span class="c1"># GET /mymodels/?ordering=-created_at</span>
+</span><span id="__span-18-36"><a id="__codelineno-18-36" name="__codelineno-18-36"></a><a href="#__codelineno-18-36"><span class="linenos" data-linenos="36 "></span></a>    <span class="n">ordering_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;created_at&#39;</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">]</span>  <span class="c1"># 指定排序字段</span>
+</span><span id="__span-18-37"><a id="__codelineno-18-37" name="__codelineno-18-37"></a><a href="#__codelineno-18-37"><span class="linenos" data-linenos="37 "></span></a>    <span class="n">ordering</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;-created_at&#39;</span><span class="p">]</span>  <span class="c1"># 默认排序规则</span>
+</span><span id="__span-18-38"><a id="__codelineno-18-38" name="__codelineno-18-38"></a><a href="#__codelineno-18-38"><span class="linenos" data-linenos="38 "></span></a>
+</span><span id="__span-18-39"><a id="__codelineno-18-39" name="__codelineno-18-39"></a><a href="#__codelineno-18-39"><span class="linenos" data-linenos="39 "></span></a>    <span class="c1"># DjangoFilterBackend</span>
+</span><span id="__span-18-40"><a id="__codelineno-18-40" name="__codelineno-18-40"></a><a href="#__codelineno-18-40"><span class="linenos" data-linenos="40 "></span></a>    <span class="c1"># GET /mymodels/?username=xxxx</span>
+</span><span id="__span-18-41"><a id="__codelineno-18-41" name="__codelineno-18-41"></a><a href="#__codelineno-18-41"><span class="linenos" data-linenos="41 "></span></a>    <span class="n">filterset_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;username&#39;</span><span class="p">,</span> <span class="s1">&#39;email&#39;</span><span class="p">]</span>  <span class="c1"># 可以过滤的字段</span>
+</span><span id="__span-18-42"><a id="__codelineno-18-42" name="__codelineno-18-42"></a><a href="#__codelineno-18-42"><span class="linenos" data-linenos="42 "></span></a>    <span class="c1"># filter_class = UserFilter</span>
+</span><span id="__span-18-43"><a id="__codelineno-18-43" name="__codelineno-18-43"></a><a href="#__codelineno-18-43"><span class="linenos" data-linenos="43 "></span></a>
+</span><span id="__span-18-44"><a id="__codelineno-18-44" name="__codelineno-18-44"></a><a href="#__codelineno-18-44"><span class="linenos" data-linenos="44 "></span></a>    <span class="n">pagination_class</span> <span class="o">=</span> <span class="n">MyPageClass</span>
+</span><span id="__span-18-45"><a id="__codelineno-18-45" name="__codelineno-18-45"></a><a href="#__codelineno-18-45"><span class="linenos" data-linenos="45 "></span></a>
+</span><span id="__span-18-46"><a id="__codelineno-18-46" name="__codelineno-18-46"></a><a href="#__codelineno-18-46"><span class="linenos" data-linenos="46 "></span></a>    <span class="nd">@action</span><span class="p">(</span><span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;get&#39;</span><span class="p">],</span> <span class="n">detail</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</span><span id="__span-18-47"><a id="__codelineno-18-47" name="__codelineno-18-47"></a><a href="#__codelineno-18-47"><span class="linenos" data-linenos="47 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">my_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-18-48"><a id="__codelineno-18-48" name="__codelineno-18-48"></a><a href="#__codelineno-18-48"><span class="linenos" data-linenos="48 "></span></a>        <span class="o">...</span>
+</span></code></pre></div>
+<h5 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>过滤后端</th>
+<th>功能描述</th>
+<th>示例代码片段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>SearchFilter</code></td>
+<td>全文搜索</td>
+<td><code>filter_backends = [SearchFilter]</code></td>
+</tr>
+<tr>
+<td><code>OrderingFilter</code></td>
+<td>排序</td>
+<td><code>filter_backends = [OrderingFilter]</code></td>
+</tr>
+<tr>
+<td><code>DjangoFilterBackend</code></td>
+<td>复杂条件过滤</td>
+<td><code>filter_backends = [DjangoFilterBackend]</code></td>
+</tr>
+<tr>
+<td>自定义过滤后端</td>
+<td>实现个性化过滤逻辑</td>
+<td>继承 <code>BaseFilterBackend</code></td>
+</tr>
+</tbody>
+</table>
+<h5 id="pagination">Pagination<a class="headerlink" href="#pagination" title="Permanent link">&para;</a></h5>
+<p><a href="https://q1mi.github.io/Django-REST-framework-documentation/api-guide/pagination_zh/">https://q1mi.github.io/Django-REST-framework-documentation/api-guide/pagination_zh/</a></p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><a href="#__codelineno-19-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1"># PageNumberPagination</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><a href="#__codelineno-19-2"><span class="linenos" data-linenos="2 "></span></a><span class="err">?</span><span class="n">page</span><span class="o">=</span><span class="mi">4</span><span class="o">&amp;</span><span class="n">page_size</span><span class="o">=</span><span class="mi">100</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><a href="#__codelineno-19-3"><span class="linenos" data-linenos="3 "></span></a><span class="c1"># LimitOffsetPagination</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><a href="#__codelineno-19-4"><span class="linenos" data-linenos="4 "></span></a><span class="err">?</span><span class="n">limit</span><span class="o">=</span><span class="mi">100</span><span class="o">&amp;</span><span class="n">offset</span><span class="o">=</span><span class="mi">300</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5"></a><a href="#__codelineno-19-5"><span class="linenos" data-linenos="5 "></span></a><span class="c1"># CursorPagination</span>
+</span></code></pre></div>
+<h5 id="drf_1">drf 源码逻辑<a class="headerlink" href="#drf_1" title="Permanent link">&para;</a></h5>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><a href="#__codelineno-20-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">APIView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><a href="#__codelineno-20-2"><span class="linenos" data-linenos=" 2 "></span></a>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><a href="#__codelineno-20-3"><span class="linenos" data-linenos=" 3 "></span></a>    <span class="c1"># The following policies may be set at either globally, or per-view.</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4"></a><a href="#__codelineno-20-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="n">renderer_classes</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_RENDERER_CLASSES</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5"></a><a href="#__codelineno-20-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">parser_classes</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_PARSER_CLASSES</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6"></a><a href="#__codelineno-20-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="n">authentication_classes</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_AUTHENTICATION_CLASSES</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7"></a><a href="#__codelineno-20-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="n">throttle_classes</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_THROTTLE_CLASSES</span>
+</span><span id="__span-20-8"><a id="__codelineno-20-8" name="__codelineno-20-8"></a><a href="#__codelineno-20-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="n">permission_classes</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_PERMISSION_CLASSES</span>
+</span><span id="__span-20-9"><a id="__codelineno-20-9" name="__codelineno-20-9"></a><a href="#__codelineno-20-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="n">content_negotiation_class</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_CONTENT_NEGOTIATION_CLASS</span>
+</span><span id="__span-20-10"><a id="__codelineno-20-10" name="__codelineno-20-10"></a><a href="#__codelineno-20-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="n">metadata_class</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_METADATA_CLASS</span>
+</span><span id="__span-20-11"><a id="__codelineno-20-11" name="__codelineno-20-11"></a><a href="#__codelineno-20-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="n">versioning_class</span> <span class="o">=</span> <span class="n">api_settings</span><span class="o">.</span><span class="n">DEFAULT_VERSIONING_CLASS</span>
+</span><span id="__span-20-12"><a id="__codelineno-20-12" name="__codelineno-20-12"></a><a href="#__codelineno-20-12"><span class="linenos" data-linenos="12 "></span></a>
+</span><span id="__span-20-13"><a id="__codelineno-20-13" name="__codelineno-20-13"></a><a href="#__codelineno-20-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="c1"># Allow dependency injection of other settings to make testing easier.</span>
+</span><span id="__span-20-14"><a id="__codelineno-20-14" name="__codelineno-20-14"></a><a href="#__codelineno-20-14"><span class="linenos" data-linenos="14 "></span></a>    <span class="n">settings</span> <span class="o">=</span> <span class="n">api_settings</span>
+</span><span id="__span-20-15"><a id="__codelineno-20-15" name="__codelineno-20-15"></a><a href="#__codelineno-20-15"><span class="linenos" data-linenos="15 "></span></a>
+</span><span id="__span-20-16"><a id="__codelineno-20-16" name="__codelineno-20-16"></a><a href="#__codelineno-20-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="n">schema</span> <span class="o">=</span> <span class="n">DefaultSchema</span><span class="p">()</span>
+</span><span id="__span-20-17"><a id="__codelineno-20-17" name="__codelineno-20-17"></a><a href="#__codelineno-20-17"><span class="linenos" data-linenos="17 "></span></a>
+</span><span id="__span-20-18"><a id="__codelineno-20-18" name="__codelineno-20-18"></a><a href="#__codelineno-20-18"><span class="linenos" data-linenos="18 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">initial</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span><span id="__span-20-19"><a id="__codelineno-20-19" name="__codelineno-20-19"></a><a href="#__codelineno-20-19"><span class="linenos" data-linenos="19 "></span></a>        <span class="o">...</span>
+</span><span id="__span-20-20"><a id="__codelineno-20-20" name="__codelineno-20-20"></a><a href="#__codelineno-20-20"><span class="linenos" data-linenos="20 "></span></a>
+</span><span id="__span-20-21"><a id="__codelineno-20-21" name="__codelineno-20-21"></a><a href="#__codelineno-20-21"><span class="linenos" data-linenos="21 "></span></a>        <span class="c1"># Ensure that the incoming request is permitted</span>
+</span><span id="__span-20-22"><a id="__codelineno-20-22" name="__codelineno-20-22"></a><a href="#__codelineno-20-22"><span class="linenos" data-linenos="22 "></span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">perform_authentication</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span id="__span-20-23"><a id="__codelineno-20-23" name="__codelineno-20-23"></a><a href="#__codelineno-20-23"><span class="linenos" data-linenos="23 "></span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">check_permissions</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span><span id="__span-20-24"><a id="__codelineno-20-24" name="__codelineno-20-24"></a><a href="#__codelineno-20-24"><span class="linenos" data-linenos="24 "></span></a>        <span class="bp">self</span><span class="o">.</span><span class="n">check_throttles</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+</span></code></pre></div>
+<p>TODO: 源码设计优劣</p>
+<p>django flask</p>
+<ul>
+<li>APIView<ul>
+<li>Request<ul>
+<li>data</li>
+<li>query_params</li>
+</ul>
+</li>
+<li>Response<ul>
+<li>status.xxx</li>
+</ul>
+</li>
+<li>顺序<ul>
+<li>as_view()<ul>
+<li>dispatch()<ul>
+<li>Authentication</li>
+<li>Permission</li>
+<li>Throttling</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>view func</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Router</li>
+<li>CORS 报错<ul>
+<li>pip install django-cors-headers</li>
+<li>https://www.cnblogs.com/WiseAdministrator/articles/11488681.html</li>
+</ul>
+</li>
+<li>VUE</li>
+</ul>
+<h2 id="_17">网站部署<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">公共服务, 一起安装起来<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><a href="#__codelineno-21-1"><span class="linenos" data-linenos="1 "></span></a>pythono<span class="w"> </span>manage.py<span class="w"> </span>check<span class="w"> </span>--deploy
+</span></code></pre></div>
+<p>使用docker compose 配置 uwsgi 或者 gunicore</p>
+<h3 id="_19">端口管理：<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>只需要暴露Nginx的80和443端口到主机。
+Django应用和数据库的端口不需要对外暴露</p>
+<table>
+<thead>
+<tr>
+<th>ip</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>80</td>
+<td>HTTP服务</td>
+</tr>
+<tr>
+<td>443</td>
+<td>HTTPS服务</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH服务</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nginx">nginx配置<a class="headerlink" href="#nginx" title="Permanent link">&para;</a></h3>
+<p>proxy_pass 实际服务地址</p>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><a href="#__codelineno-22-1"><span class="linenos" data-linenos="1 "></span></a>proxy_pass<span class="w"> </span>http://127.0.0.1:8080<span class="p">;</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><a href="#__codelineno-22-2"><span class="linenos" data-linenos="2 "></span></a>proxy_pass<span class="w"> </span>http://127.0.0.1:8081<span class="p">;</span>
+</span></code></pre></div>
+<h4 id="nginx_1">nginx配置多个项目<a class="headerlink" href="#nginx_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>location 不同路径 </li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><a href="#__codelineno-23-1"><span class="linenos" data-linenos="1 "></span></a>location<span class="w"> </span>/project1/
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><a href="#__codelineno-23-2"><span class="linenos" data-linenos="2 "></span></a>location<span class="w"> </span>/project2/
+</span></code></pre></div>
+<ul>
+<li>server_name 不同域名</li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><a href="#__codelineno-24-1"><span class="linenos" data-linenos="1 "></span></a>server_name<span class="w"> </span>project1.localhost<span class="p">;</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><a href="#__codelineno-24-2"><span class="linenos" data-linenos="2 "></span></a>server_name<span class="w"> </span>project2.localhost<span class="p">;</span>
+</span></code></pre></div>
+<ul>
+<li>listen 不同端口 </li>
+</ul>
+<div class="language-bash highlight"><span class="filename">Bash</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><a href="#__codelineno-25-1"><span class="linenos" data-linenos="1 "></span></a>listen<span class="w"> </span><span class="m">8080</span><span class="p">;</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><a href="#__codelineno-25-2"><span class="linenos" data-linenos="2 "></span></a>listen<span class="w"> </span><span class="m">8081</span><span class="p">;</span>
+</span></code></pre></div>
+<h2 id="django">django 源码风格<a class="headerlink" href="#django" title="Permanent link">&para;</a></h2>
+<p>广泛使用 Minin 和 decorator</p>
+<h2 id="_20">相关文档<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.djangoproject.com/zh-hans/5.0/">Django Doc</a></li>
+<li><a href="https://www.django-rest-framework.org/tutorial/quickstart/">DRF Doc</a></li>
+</ul>
+<h2 id="_21">常见问题<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h2>
+<h3 id="cors">CORS<a class="headerlink" href="#cors" title="Permanent link">&para;</a></h3>
+<p>在前后端分离开发时, 经常遇到</p>
+<p>CORS 浏览器的同源策略: 是一个重要的安全机制. 默认禁止不同源访问. 允许服务器声明哪些源可以访问它的资源。这需要**服务器设置response来允许跨域**。</p>
+<p>源由协议、域名和端口号组成, 例如 </p>
+<ul>
+<li><code>http://127.0.0.1:8000</code></li>
+<li><code>ws://127.0.0.1:8000</code></li>
+</ul>
+<p>设置response来允许跨域:</p>
+<div class="language-python highlight"><span class="filename">Python</span><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><a href="#__codelineno-26-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kn">from</span><span class="w"> </span><span class="nn">django.utils.deprecation</span><span class="w"> </span><span class="kn">import</span> <span class="n">MiddlewareMixin</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><a href="#__codelineno-26-2"><span class="linenos" data-linenos=" 2 "></span></a>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><a href="#__codelineno-26-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">CorsMiddleware</span><span class="p">(</span><span class="n">MiddlewareMixin</span><span class="p">):</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><a href="#__codelineno-26-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">process_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><a href="#__codelineno-26-5"><span class="linenos" data-linenos=" 5 "></span></a>        <span class="c1"># 主要是response 设置三个值, 统配设置</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a><a href="#__codelineno-26-6"><span class="linenos" data-linenos=" 6 "></span></a>        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+</span><span id="__span-26-7"><a id="__codelineno-26-7" name="__codelineno-26-7"></a><a href="#__codelineno-26-7"><span class="linenos" data-linenos=" 7 "></span></a>        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;*&quot;</span>
+</span><span id="__span-26-8"><a id="__codelineno-26-8" name="__codelineno-26-8"></a><a href="#__codelineno-26-8"><span class="linenos" data-linenos=" 8 "></span></a>        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Methods&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GET, POST, PUT, PATCH, DELETE, OPTIONS&quot;</span>
+</span><span id="__span-26-9"><a id="__codelineno-26-9" name="__codelineno-26-9"></a><a href="#__codelineno-26-9"><span class="linenos" data-linenos=" 9 "></span></a>        <span class="k">return</span> <span class="n">response</span>
+</span><span id="__span-26-10"><a id="__codelineno-26-10" name="__codelineno-26-10"></a><a href="#__codelineno-26-10"><span class="linenos" data-linenos="10 "></span></a>
+</span><span id="__span-26-11"><a id="__codelineno-26-11" name="__codelineno-26-11"></a><a href="#__codelineno-26-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="k">def</span><span class="w"> </span><span class="nf">process_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+</span><span id="__span-26-12"><a id="__codelineno-26-12" name="__codelineno-26-12"></a><a href="#__codelineno-26-12"><span class="linenos" data-linenos="12 "></span></a>        <span class="c1"># 主要是response 设置三个值, 具体设置</span>
+</span><span id="__span-26-13"><a id="__codelineno-26-13" name="__codelineno-26-13"></a><a href="#__codelineno-26-13"><span class="linenos" data-linenos="13 "></span></a>
+</span><span id="__span-26-14"><a id="__codelineno-26-14" name="__codelineno-26-14"></a><a href="#__codelineno-26-14"><span class="linenos" data-linenos="14 "></span></a>        <span class="n">origin</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">scheme</span><span class="si">}</span><span class="s1">://</span><span class="si">{</span><span class="n">request</span><span class="o">.</span><span class="n">get_host</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span>
+</span><span id="__span-26-15"><a id="__codelineno-26-15" name="__codelineno-26-15"></a><a href="#__codelineno-26-15"><span class="linenos" data-linenos="15 "></span></a>        <span class="k">if</span> <span class="n">origin</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;origin1&#39;</span><span class="p">,</span> <span class="s1">&#39;origin2&#39;</span><span class="p">,</span> <span class="s1">&#39;origin3&#39;</span><span class="p">]:</span>
+</span><span id="__span-26-16"><a id="__codelineno-26-16" name="__codelineno-26-16"></a><a href="#__codelineno-26-16"><span class="linenos" data-linenos="16 "></span></a>            <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Origin&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">origin</span>
+</span><span id="__span-26-17"><a id="__codelineno-26-17" name="__codelineno-26-17"></a><a href="#__codelineno-26-17"><span class="linenos" data-linenos="17 "></span></a>
+</span><span id="__span-26-18"><a id="__codelineno-26-18" name="__codelineno-26-18"></a><a href="#__codelineno-26-18"><span class="linenos" data-linenos="18 "></span></a>        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Headers&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Authorization, Content-Type&quot;</span>
+</span><span id="__span-26-19"><a id="__codelineno-26-19" name="__codelineno-26-19"></a><a href="#__codelineno-26-19"><span class="linenos" data-linenos="19 "></span></a>        <span class="n">response</span><span class="p">[</span><span class="s2">&quot;Access-Control-Allow-Methods&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;GET, POST, PUT, PATCH, DELETE, OPTIONS&quot;</span>
+</span><span id="__span-26-20"><a id="__codelineno-26-20" name="__codelineno-26-20"></a><a href="#__codelineno-26-20"><span class="linenos" data-linenos="20 "></span></a>        <span class="k">return</span> <span class="n">response</span>
+</span></code></pre></div>
+<h3 id="csrf">CSRF<a class="headerlink" href="#csrf" title="Permanent link">&para;</a></h3>
+<p>是一种攻击方式，攻击者利用已登录的session进行攻击, 因此使用一个token来二次验证</p>
+<p>默认情况下，Django 的 CsrfViewMiddleware 会对所有非安全请求（如 POST、PUT、DELETE 等）进行 CSRF 验证.</p>
+<p>drf auth跳过方式:</p>
+<p>SessionAuthentication 改为 TokenAuthentication
+或自定义 <code>authentication_classes</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../AI%E6%95%99%E7%A8%8B/" class="md-footer__link md-footer__link--prev" aria-label="Previous: AI教程">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                AI教程
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../docker%E6%8C%87%E5%8D%97/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker指南">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Docker指南
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 zhenda
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.expand", "navigation.path", "navigation.top", "navigation.tracking", "navigation.footer", "search.suggest", "search.highlight", "content.code.copy", "content.action.edit", "content.action.view", "toc.follow"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+        <script src="../../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
