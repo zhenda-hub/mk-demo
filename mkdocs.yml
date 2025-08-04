@@ -1,7 +1,8 @@
 site_name: MkLorum
 
+# 控制目录
 # nav:
-#   - Home: index.md
+#   - 首页: index.md
 #   - 入门指南:
 #       - 安装: getting-started/installation.md
 #       - 配置: getting-started/configuration.md
